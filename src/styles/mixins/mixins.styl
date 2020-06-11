@@ -80,15 +80,18 @@ pseudo($position, $width, $height)
 
 //размер шрифта, высота строки
 
-font-rem($size, $base-font-size = 18)
+font-rem($size, $base-font-size = 16)
 	font-size ($size / $base-font-size) * 1rem
 
-line($line-height = 28, $font-size = 18)
+line($line-height = 24, $font-size = 16)
 	line-height ($line-height / $font-size)
 
 //тень
 /*shadow($value = $box-shadow )
 	box-shadow $value*/
+
+background($imgpath, $position= 0% 0%, $repeat= no-repeat)
+	background url('../assets/images' + $imgpath) $position $repeat
 
 //радиус
 
@@ -97,10 +100,10 @@ radius($val)
 	
 //заголовки
 h1-title($color = $text-color, $position = center)
-	color $color
-	text-align $position
 	font-rem(36)
 	line(46,36)
+	color $color
+	text-align $position
 
 	+breakpoint-md()
 		font-rem(50)
@@ -157,7 +160,7 @@ btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700)
 	background-color $bg
 	display inline-block
 	text-align center
-	padding 11px 20px
+	padding 18px 27px
 	cursor pointer
 
 	/*&:hover
@@ -182,7 +185,7 @@ make-col($size)
 	flex 0 0 percentage($size / $columns)
 	max-width percentage($size / $columns)
 
-container($max-width = 966px)
+container($max-width = 996px)
 	max-width $max-width
 	width 100%
 	padding-right 20px

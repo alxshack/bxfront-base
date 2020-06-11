@@ -1,0 +1,52 @@
+.main-nav
+	+breakpoint-lg()
+		flex-block()
+		align-items center
+
+	&__list
+		@extend .hide-up-to-lg
+		margin-bottom 0
+
+		+breakpoint-lg()
+			flex-block()
+
+		&-link
+			font-rem(14)
+			line(19,14)
+			@extend .semi-bold
+			color $text-color
+			text-transform uppercase
+
+		&-item
+			+breakpoint-lg()
+				margin-right 20px
+
+	&__buttons
+		@extend .hide-up-to-lg
+
+		+breakpoint-lg()
+			flex-block()
+			margin-right 21px
+
+	&__btn
+		font-rem(14)
+		line(19,14)
+		padding 10px 15px
+
+		+breakpoint-lg()
+			&:not(:last-child)
+				margin-right 9px
+
+	&__toggle
+		size(26px,23px)
+		background('/icons/icon-burger.svg')
+		cursor pointer
+		padding 0
+		background-color transparent
+		border none
+		outline none
+		display block
+
+		&--open
+			background('icons/icon-close-red.svg')
+

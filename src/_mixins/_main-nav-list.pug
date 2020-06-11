@@ -1,5 +1,5 @@
 mixin main-nav-list(values)
 	ul(class!=attributes.class)
 		each val in values
-			li
+			li(class!=attributes.class+'-item')
 				a(href='#' class!=attributes.class+'-link')= val

@@ -2,19 +2,22 @@ include ../_mixins
 
 header.header
 	.container
-		a(href='#').header__logo
-			img(src='#')
+		.header__row
+			.header__left
+				a(href='#').header__logo
+					+image('logos/logo.svg','Лого')
 
-		.header__company-name
-			span 1C-WiseAdvice. Дочерняя компания 1С
+				.header__company-name
+					span 1C-WiseAdvice. Дочерняя компания 1С
 
-		nav.header__nav.main-nav
+			.header__right
+				nav.main-nav
 
-			- var mainMenuItems= ['Тур','Возможности','Тарифы']
-			+main-nav-list(mainMenuItems)(class='main-nav__list')
+					- var mainMenuItems= ['Тур','Возможности','Тарифы']
+					+main-nav-list(mainMenuItems)(class='main-nav__list')
 
-			.main-nav__buttons
-				a(href='#').btn-light Войти
-				a(href='#').btn Попробовать
+					.main-nav__buttons
+						a(href='#').btn-light.main-nav__btn Войти
+						a(href='#').btn.btn--600.main-nav__btn Попробовать
 
-			button.main-nav__toggle
+					button.main-nav__toggle

@@ -1,0 +1,48 @@
+.header
+	padding-top 14px
+	padding-bottom 14px
+
+	+breakpoint-lg()
+		padding-top 15px
+		padding-bottom 16px
+
+	&__row
+		flex-block()
+		justify-content space-between
+
+		+breakpoint-lg()
+			make-row()
+			justify-content flex-start
+			align-items center
+
+	&__left
+		+breakpoint-lg()
+			make-col-ready()
+			make-col(5)
+			flex-block()
+
+	&__right
+		+breakpoint-lg()
+			make-col-ready()
+			make-col(7)
+		
+	&__logo
+		max-width 197px
+
+		+breakpoint-lg()
+			margin-right 19px
+
+	&__company
+		&-name
+			@extend .hide-up-to-lg
+
+			+breakpoint-lg()
+				width calc('100% - (197px + 19px)')
+				padding-left 17px
+				border-left 2px solid rgba($text-color, 0.4)
+
+			span
+				font-rem(13)
+				line(18,13)
+				display inline-block
+				color $text-color--secondary
