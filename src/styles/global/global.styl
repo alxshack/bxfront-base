@@ -1,0 +1,125 @@
+normalize()
+
+html
+	height 100%
+	font-size 112.5%
+	line-height 1.555
+	box-sizing border-box
+	-webkit-font-smoothing antialiased
+
+*,
+*:before,
+*:after
+	box-sizing inherit
+
+body
+	height 100%
+	margin 0
+	padding 0
+	color $text-color
+	font-family $primary-font-family
+
+	&._is-open-menu
+		overflow hidden
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	margin-top 0
+	font-family $secondary-font-family
+	margin-bottom 20px
+
+	+breakpoint-md()
+		margin-bottom 30px
+
+p
+	margin-bottom 10px
+
+	&:last-child
+		margin-bottom 0
+
+img
+	max-width 100%
+	height auto
+
+address
+	font-style normal
+
+// Классы-хелперы
+
+.hide-xs
+	display none
+
+
+.hide-up-to-sm
+	+breakpoint-up-to-sm()
+		display none
+		height 0
+
+
+.hide-up-to-md
+	+breakpoint-up-to-md()
+		display none
+
+
+
+.hide-up-to-lg
+	+breakpoint-up-to-lg()
+		display none !important
+
+
+.hide-up-to-xl
+	+breakpoint-up-to-xl()
+		display none
+
+
+.hide-xs
+	display none
+
+
+.hide-sm
+	+breakpoint-sm()
+		display none
+
+
+.hide-md
+	+breakpoint-md()
+		display none
+
+
+.hide-lg
+	+breakpoint-lg()
+		display none
+
+
+.hide-xl
+	+breakpoint-xl()
+		display none
+
+.text-center
+	text-align center
+
+.text-left
+	text-align left
+
+.text-right
+	text-align right
+
+
+ul
+	list-style none
+	padding 0
+	margin-top 0
+
+a
+	color $link-color
+	text-decoration none
+
+	&:hover
+		color $link-color-hover
+
+p
+	margin-top 0

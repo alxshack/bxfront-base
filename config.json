@@ -1,0 +1,105 @@
+{
+	"sourceMap": {
+		"sourceMapBuild": true,
+		"markupIncludePath": "blocks",
+		"addBefore": "global/header/header",
+		"addAfter": "global/footer/footer"
+	},
+
+	"path": {
+		"source": "src",
+		"distributive": "dist",
+		"assets": "src/assets",
+		"markup": "markup",
+		"markupInclude": "pages",
+		"destination": {
+			"scripts": "markup/_include/js",
+			"styles": "markup/_include/css",
+			"sprites": "markup/_include/sprites",
+			"assets": "markup/_include/assets"
+		}
+	},
+
+	"vendor": {
+		"scripts": {
+			"svg4everybody": {
+				"path": "bower_components/svg4everybody/dist/svg4everybody.min.js"
+			},
+			"urijs": {
+				"path": "bower_components/uri.js/src/URI.min.js"
+			},
+			"fancybox": {
+				"path": "bower_components/fancybox/source/jquery.fancybox.pack.js"
+			},
+			"select2": {
+				"path": "bower_components/select2/dist/js/select2.full.min.js"
+			},
+			"tooltipster": {
+				"path": "bower_components/tooltipster/dist/js/tooltipster.bundle.min.js"
+			},
+			"scrollbar": {
+				"path": "bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"
+			},
+			"multiselect": {
+				"path": "bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"
+			},
+			"multiselectru": {
+				"path": "bower_components/bootstrap-select/dist/js/i18n/defaults-ru_RU.js"
+			},
+			"jquery-ui": {
+				"path": "bower_components/jquery-ui/jquery-ui.min.js"
+			},
+			"fontfaceobserver": {
+				"path": "bower_components/fontfaceobserver/fontfaceobserver.js"
+			},
+			"slick-carousel": {
+				"path": "bower_components/slick-carousel/slick/slick.min.js"
+			},
+			"sticky-kit": {
+				"path": "bower_components/sticky-kit/jquery.sticky-kit.js"
+			}
+		},
+		"styles": {
+			"fancybox": {
+				"path": "bower_components/fancybox/source/jquery.fancybox.css",
+				"adjustParam": {
+					"prependRelative": "../vendor/fancybox/"
+				}
+			},
+			"select2": {
+				"path": "bower_components/select2/dist/css/select2.min.css",
+				"adjustParam": {
+					"prependRelative": "../vendor/select2/"
+				}
+			},
+			"tooltipster": {
+				"path": "bower_components/tooltipster/dist/css/tooltipster.bundle.min.css",
+				"adjustParam": {
+					"prependRelative": "../vendor/tooltipster/"
+				}
+			},
+			"scrollbar": {
+				"path": "bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css",
+				"adjustParam": {
+					"prependRelative": "../vendor/malihu-custom-scrollbar-plugin/"
+				}
+			},
+			"slick-carousel": {
+				"path": "bower_components/slick-carousel/slick/slick.css",
+				"adjustParam": {
+					"prependRelative": "../vendor/slick-carousel/"
+				}
+			}
+		},
+		"files": {
+			"fancybox": {
+				"src": "bower_components/fancybox/source/fancybox_loading.gif",
+				"dest": "fancybox"
+			},
+			"scrollbar": {
+				"src": "bower_components/malihu-custom-scrollbar-plugin/mCSB_buttons.png",
+				"dest": "malihu-custom-scrollbar-plugin"
+			}
+		}
+	}
+}

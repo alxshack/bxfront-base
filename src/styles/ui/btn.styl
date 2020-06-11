@@ -1,0 +1,21 @@
+.btn
+	btn-style()
+	shadow($highlighted-box-shadow)
+
+	&._sm-font
+		font-rem(15)
+		line(18,15)
+
+.btn-light
+	btn-style($link-color, transparent)
+	border 1px solid $link-color
+
+	&:hover
+		border 1px solid transparent
+
+.btn-wrapper
+	text-align center
+	margin-top 30px
+
+	+breakpoint-lg()
+		margin-top 50px

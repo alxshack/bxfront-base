@@ -1,0 +1,52 @@
+.container
+	container()
+
+	&-sm
+		container(1130px)
+
+//flex layout
+
+.row
+	&-md
+		+breakpoint-md()
+			make-row()
+
+	&-lg
+		+breakpoint-lg()
+			make-row()
+
+.col
+
+	&-md
+		+breakpoint-md()
+			make-col-ready()
+
+		&--1-2
+			+breakpoint-md()
+				make-col(6)
+
+		&--2-5
+			+breakpoint-md()
+				make-col(5)
+
+		&--3-5
+			+breakpoint-sm()
+				make-col-ready()
+				make-col(7)
+
+	&-lg
+		+breakpoint-lg()
+			make-col-ready()
+
+		&--1-2
+			+breakpoint-lg()
+				make-col(6)
+
+		&--2-5
+			+breakpoint-lg()
+				make-col(5)
+
+		&--3-5
+			+breakpoint-lg()
+				make-col-ready()
+				make-col(7)

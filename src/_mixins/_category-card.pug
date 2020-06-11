@@ -1,0 +1,7 @@
+mixin category-card(card)
+	div.category-card
+		span.category-card__remark= ' класс ' +  card.class
+		div.category-card__text
+			h3.category-card__title !{card.text}
+		div.category-card__img
+			img(alt=card.text src='../../templates/main/assets/images/categories/' + card.imgSrc)

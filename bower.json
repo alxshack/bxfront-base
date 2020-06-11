@@ -1,0 +1,22 @@
+{
+	"name": "wiseadvice-it-bx-site",
+	"version": "0.0.1",
+	"authors": [
+		"Artem Iksanov <tihomirov@wiseadvice.ru>"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components"
+	],
+	"dependencies": {
+		"fancybox": "~2.1.5",
+		"select2": "select2/select2#^4.0.3",
+		"svg4everybody": "^2.1.7",
+		"jquery-ui": "^1.12.1",
+		"fontfaceobserver": "^2.0.13",
+		"slick-carousel": "^1.8.1",
+		"tooltipster": "^4.2.7"
+	}
+}

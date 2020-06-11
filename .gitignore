@@ -1,0 +1,26 @@
+node_modules
+bower_components
+dist
+markup
+npm-debug.log
+
+
+## Trash
+#-------------------------
+desktop.ini
+.DS_Store
+.DS_Store?
+.Trashes
+
+# IDE Files
+#-------------------------
+/nbproject
+/.idea
+
+## Sublime Text cache files
+#-------------------------
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project

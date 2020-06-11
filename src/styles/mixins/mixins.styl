@@ -1,0 +1,205 @@
+// Media query миксины
+// Кастомные медиа запросы
+
+breakpoint(screen-size)
+	@media (min-width: screen-size)
+		{block}
+
+breakpoint-up-to(screen-size)
+	@media (max-width: screen-size)
+		{block}
+
+breakpoint-range(min-screen-size, max-screen-size)
+	@media (min-width: min-screen-size) and (max-width: max-screen-size)
+		{block}
+
+// Медиа запросы с заранее определенными контрольными точками
+breakpoint-sm()
+	@media (min-width: $screen-sm)
+		{block}
+
+breakpoint-up-to-sm()
+	@media (max-width: $screen-sm - 1)
+		{block}
+
+breakpoint-md()
+	@media (min-width: $screen-md)
+		{block}
+
+breakpoint-up-to-md()
+	@media (max-width: $screen-md - 1)
+		{block}
+
+breakpoint-lg()
+	@media (min-width: $screen-lg)
+		{block}
+
+breakpoint-up-to-lg()
+	@media (max-width: $screen-lg - 1)
+		{block}
+
+breakpoint-xl()
+	@media (min-width: $screen-xl)
+		{block}
+
+breakpoint-up-to-xl()
+	@media (max-width: $screen-xl - 1)
+		{block}
+
+
+// Миксины хелперы
+text-hide()
+	font 0/0 a
+	color transparent
+	text-shadow none
+
+
+cleartop()
+	&:before
+		content ''
+		display table
+		clear both
+
+
+visually-hidden()
+	position absolute !important
+	width 1px
+	height 1px
+	overflow hidden
+	clip rect(1px, 1px, 1px, 1px)
+
+inline-block()
+	display inline-block
+	vertical-align middle
+
+pseudo($position, $width, $height)
+	content ''
+	position $position
+	display inline-block
+	size($width, $height)
+
+//размер шрифта, высота строки
+
+font-rem($size, $base-font-size = 18)
+	font-size ($size / $base-font-size) * 1rem
+
+line($line-height = 28, $font-size = 18)
+	line-height ($line-height / $font-size)
+
+//тень
+shadow($value = $box-shadow )
+	box-shadow $value
+
+//радиус
+
+radius($val)
+	border-radius $val
+	
+//заголовки
+h1-title($color = $text-color, $position = center)
+	color $color
+	text-align $position
+	font-rem(36)
+	line(46,36)
+
+	+breakpoint-md()
+		font-rem(50)
+		line(60,50)
+
+h2-title($color = $text-color, $position = left)
+	color $color
+	text-align $position
+	font-rem(28)
+	line(38,28)
+
+	+breakpoint-md()
+		font-rem(46)
+		line(56,46)
+
+h3-title($color = $text-color, $position = left)
+	color $color
+	text-align $position
+	font-rem(22)
+	line(30,22)
+
+	+breakpoint-md()
+		font-rem(35)
+		line(45,35)
+
+h3-like-title()
+	font-rem(28)
+	line(38,28)
+
+	+breakpoint-md()
+		font-rem(30)
+		line(38,30)
+
+
+h4-title($color = $text-color, $position = left)
+	text-align $position
+	color $color
+	font-rem(24) /*@Todo:временно, так как не нашла значения в макетах*/
+	line(32,24) /*@Todo:временно, так как не нашла значения в макетах*/
+
+	+breakpoint-md()
+		font-rem(24)
+		line(32,24)
+
+//ссылки и кнопки
+btn-style($color = $white, $bg = $color-highlighted)
+	color $color
+	background-color $bg
+	display inline-block
+	text-align center
+	padding 11px 20px
+	radius(5px)
+	font-rem(18)
+	line(28,18)
+	cursor pointer
+
+	&:hover
+		background-color $main-bg
+		color $white
+		border none
+
+//сетка
+make-row()
+	display flex
+	flex-wrap wrap
+	margin-right ($gutter / -2)
+	margin-left ($gutter / -2)
+
+make-col-ready()
+	position relative
+	width 100%
+	padding-right ($gutter / 2)
+	padding-left ($gutter / 2)
+
+make-col($size)
+	flex 0 0 percentage($size / $columns)
+	max-width percentage($size / $columns)
+
+container($max-width = 1320px)
+	max-width $max-width
+	width 100%
+	padding-right 20px
+	padding-left 20px
+	margin-right auto
+	margin-left auto
+	cleartop()
+
+	+breakpoint-md()
+		padding-right 15px
+		padding-left 15px
+
+flex-block()
+	display flex
+	flex-wrap wrap
+
+padding--x($top, $bottom)
+	padding-top $top
+	padding-bottom $bottom
+
+centered-absolute-x()
+	left 50%
+	transform translateX(-50%)
