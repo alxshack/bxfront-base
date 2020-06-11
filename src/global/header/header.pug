@@ -1,0 +1,20 @@
+include ../_mixins
+
+header.header
+	.container
+		a(href='#').header__logo
+			img(src='#')
+
+		.header__company-name
+			span 1C-WiseAdvice. Дочерняя компания 1С
+
+		nav.header__nav.main-nav
+
+			- var mainMenuItems= ['Тур','Возможности','Тарифы']
+			+main-nav-list(mainMenuItems)(class='main-nav__list')
+
+			.main-nav__buttons
+				a(href='#').btn-light Войти
+				a(href='#').btn Попробовать
+
+			button.main-nav__toggle

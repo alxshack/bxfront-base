@@ -87,8 +87,8 @@ line($line-height = 28, $font-size = 18)
 	line-height ($line-height / $font-size)
 
 //тень
-shadow($value = $box-shadow )
-	box-shadow $value
+/*shadow($value = $box-shadow )
+	box-shadow $value*/
 
 //радиус
 
@@ -146,21 +146,24 @@ h4-title($color = $text-color, $position = left)
 		line(32,24)
 
 //ссылки и кнопки
-btn-style($color = $white, $bg = $color-highlighted)
+btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700)
+	radius($radius)
+	font-rem(18)
+	line(24,18)
+	font-weight $bold
+	text-transform uppercase
+	letter-spacing 0.54px
 	color $color
 	background-color $bg
 	display inline-block
 	text-align center
 	padding 11px 20px
-	radius(5px)
-	font-rem(18)
-	line(28,18)
 	cursor pointer
 
-	&:hover
+	/*&:hover
 		background-color $main-bg
 		color $white
-		border none
+		border none*/
 
 //сетка
 make-row()
@@ -179,7 +182,7 @@ make-col($size)
 	flex 0 0 percentage($size / $columns)
 	max-width percentage($size / $columns)
 
-container($max-width = 1320px)
+container($max-width = 966px)
 	max-width $max-width
 	width 100%
 	padding-right 20px
