@@ -11,7 +11,7 @@ header.header
 					span 1C-WiseAdvice. Дочерняя компания 1С
 
 			.header__right
-				nav.main-nav
+				nav.main-nav.js-main-nav
 
 					- var mainMenuItems= ['Тур','Возможности','Тарифы']
 					+main-nav-list(mainMenuItems)(class='main-nav__list')
@@ -20,4 +20,4 @@ header.header
 						a(href='#').btn-light.main-nav__btn Войти
 						a(href='#').btn.btn--600.main-nav__btn Попробовать
 
-					button.main-nav__toggle
+					button.main-nav__toggle.js-main-nav__toggle

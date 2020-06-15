@@ -8,12 +8,12 @@
 
 	&__row
 		flex-block()
+		align-items center
 		justify-content space-between
 
 		+breakpoint-lg()
 			make-row()
 			justify-content flex-start
-			align-items center
 
 	&__left
 		+breakpoint-lg()
@@ -39,7 +39,7 @@
 			+breakpoint-lg()
 				width calc('100% - (197px + 19px)')
 				padding-left 17px
-				border-left 2px solid rgba($text-color, 0.4)
+				border-left 2px solid rgba(#C4C4C4, 0.4)
 
 			span
 				font-rem(13)
