@@ -1,5 +1,8 @@
 .footer
 	&__top
+		padding-top 30px
+		padding-bottom 30px
+
 		+breakpoint-lg()
 			make-row()
 
@@ -7,3 +10,48 @@
 			+breakpoint-lg()
 				make-col-ready()
 				make-col(4)
+
+	&__bottom
+		padding-top 30px
+		padding-bottom 30px
+
+		+breakpoint-lg()
+			make-row()
+			padding-bottom 60px
+
+		&-left-col,
+		&-right-col
+			+breakpoint-lg()
+				make-col-ready()
+
+		&-left-col
+			+breakpoint-lg()
+				make-col(8)
+
+		&-right-col
+			+breakpoint-lg()
+				make-col(4)
+
+
+	&__company
+		&-name
+			+breakpoint-lg()
+				padding-left 17px
+				border-left 2px solid rgba(#C4C4C4, 0.4)
+
+			span
+				font-rem(13)
+				line(18,13)
+				display inline-block
+				color $text-color--secondary
+
+	&__phone
+		font-rem(24)
+		line(22)
+		@extend .semi-bold
+		display block
+		margin-bottom 10px
+
+		+breakpoint-lg()
+			margin-bottom 30px
+
