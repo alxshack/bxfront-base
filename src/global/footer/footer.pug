@@ -1,0 +1,31 @@
+include ../_mixins
+
+footer.footer
+	.container
+		.footer__top
+			.footer__top-col
+				a(href='tel:+74959958258').footer__phone +7 495 995 82 58
+
+				-
+					var borderedLinksText =
+					[
+					'Заказать обратный звонок',
+					'*****@*******.ru',
+					];
+
+				+bordered-links-list(borderedLinksText)
+			.footer__top-col
+				-
+					var borderedLinksText =
+						[
+							'Карта сайта ',
+							'Другие компании группы Wiseadvice',
+							'Корпоративная политика в отношении персональных данных ',
+							'Политика в области качества'
+						];
+
+				+bordered-links-list(borderedLinksText)
+
+			.footer__top-col
+				p.text-small Все указанные на сайте цены носят информационный характер и не являются публичной офертой (ст. 437 ГК РФ)
+		.footer__bottom
