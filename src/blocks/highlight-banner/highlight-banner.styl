@@ -1,0 +1,27 @@
+.highlight-banner
+	padding-top 70px
+	padding-bottom 50px
+	color $white
+	text-align center
+
+	+breakpoint-md()
+		padding-top 60px
+		padding-bottom 80px
+
+	&--no-figure
+		background $gray--darker
+
+	&__img-holder
+		size(100px,100px)
+		margin 0 auto 30px auto
+
+		img
+			max-height 100%
+			vertical-align middle
+
+	&__btn
+		width 100%
+
+		+breakpoint-md()
+			width auto
+			margin-bottom 10px
