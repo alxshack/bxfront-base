@@ -105,19 +105,15 @@ radius($val)
 	border-radius $val
 	
 //заголовки
-h1-title($color = $text-color, $position = center)
+h1-title()
 	font-rem(32)
 	line(38,32)
-	color $color
-	text-align $position
 
 	+breakpoint-md()
 		font-rem(46)
 		line(60,46)
 
-h2-title($color = $text-color, $position = left)
-	color $color
-	text-align $position
+h2-title()
 	font-rem(28)
 	line(38,28)
 
@@ -125,9 +121,7 @@ h2-title($color = $text-color, $position = left)
 		font-rem(46)
 		line(56,46)
 
-h3-title($color = $text-color, $position = left)
-	color $color
-	text-align $position
+h3-title()
 	font-rem(22)
 	line(30,22)
 
@@ -135,24 +129,14 @@ h3-title($color = $text-color, $position = left)
 		font-rem(35)
 		line(45,35)
 
-h3-like-title()
-	font-rem(28)
-	line(38,28)
+
+h4-title($color = $text-color)
+	font-rem(20)
+	line(25,20)
 
 	+breakpoint-md()
-		font-rem(30)
-		line(38,30)
-
-
-h4-title($color = $text-color, $position = left)
-	text-align $position
-	color $color
-	font-rem(24) /*@Todo:временно, так как не нашла значения в макетах*/
-	line(32,24) /*@Todo:временно, так как не нашла значения в макетах*/
-
-	+breakpoint-md()
-		font-rem(24)
-		line(32,24)
+		font-rem(25)
+		line(32,25)
 
 //ссылки и кнопки
 btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700)

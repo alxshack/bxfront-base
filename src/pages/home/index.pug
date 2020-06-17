@@ -1,5 +1,27 @@
 extends ../../templates/main.pug
 
+block variables
+	-
+		let experts =
+		[
+			{
+				name:'Анастасия Щербинина',
+				position: 'Директор департамента финансового аутсорсинга',
+				imgSrc:'img-anastasya-sherbina-sm.png'
+			},
+			{
+				name:'Юрий Мартынов',
+				position: 'Руководитель проектов в области управленческого учёта и финансового управления',
+				imgSrc:'img-juriy-martynov-sm.png'
+			},
+			{
+				name:'Иван Иванов ',
+				position: 'Эксперт-практик, консультант по методологии ведения управленческого учёта',
+				imgSrc:'img-ivan-ivanov.png'
+			}
+		];
+
+
 block main-content
 	include ../../blocks/sections/home/intro
 	include ../../blocks/sections/home/experts

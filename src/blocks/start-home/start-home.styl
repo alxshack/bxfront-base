@@ -1,5 +1,6 @@
 .start-home
 	@extend .text-center
+	color $white
 	padding-bottom 25px
 	padding-top 25px
 	background-image linear-gradient(89.92deg, #4AAF26 -0.04%, #9ABE09 100.04%), #FFFBF0
@@ -11,7 +12,6 @@
 	&__subtitle
 		@extend .lead
 		@extend .lead--lg
-		@extend .lead--white
 		margin-bottom 20px
 
 		+breakpoint-lg()
@@ -19,7 +19,6 @@
 
 	&__heading
 		@extend .heading-h1
-		@extend .heading-h1--white
 
 		+breakpoint-md()
 			margin-bottom 40px
@@ -35,20 +34,21 @@
 				margin-bottom 50px
 
 	&__remark
-		display block
-		@extend .white-color
 		font-rem(14)
 		line(20,14)
+		display block
 		margin-top 10px
 
 		+breakpoint-md()
 			display none
 
 	&__img-wrapper
+
 		+breakpoint-lg()
 			margin-left -30px
 			margin-right -30px
 
 	&__btn
+
 		+breakpoint-up-to-md()
 			width 100%
