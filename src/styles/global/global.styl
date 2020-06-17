@@ -111,12 +111,29 @@ address
 .semi-bold
 	font-weight 600
 
+.white-color
+	color $white
+
 .light
 	font-weight 300
 
 .text-small
 	font-rem(14)
 	line(22,14)
+
+.lead
+	@extend .light
+
+	&--white
+		@extend .white-color
+
+	&--lg
+		font-rem(20)
+		line(25,20)
+
+		+breakpoint-md()
+			font-rem(36)
+			line(48,36)
 
 
 ul

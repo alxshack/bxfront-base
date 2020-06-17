@@ -1,0 +1,49 @@
+.start-home
+	@extend .text-center
+	padding-bottom 25px
+	padding-top 25px
+	background-image linear-gradient(89.92deg, #4AAF26 -0.04%, #9ABE09 100.04%), #FFFBF0
+
+	+breakpoint-lg()
+		padding-bottom 60px
+		padding-top 60px
+
+	&__subtitle
+		@extend .lead
+		@extend .lead--lg
+		@extend .lead--white
+		margin-bottom 20px
+
+		+breakpoint-lg()
+			margin-bottom 0
+
+	&__heading
+		@extend .heading-h1
+		@extend .heading-h1--white
+
+		+breakpoint-md()
+			margin-bottom 40px
+
+		+breakpoint-lg()
+			margin-bottom 140px
+
+		&-wrapper
+			margin-bottom 30px
+
+			+breakpoint-md()
+				display flex
+				flex-direction column-reverse
+
+	&__remark
+		display block
+		@extend .white-color
+		font-rem(14)
+		line(20,14)
+		margin-top 10px
+
+		+breakpoint-md()
+			display none
+
+	&__btn
+		+breakpoint-up-to-md()
+			width 100%

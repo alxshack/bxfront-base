@@ -106,14 +106,14 @@ radius($val)
 	
 //заголовки
 h1-title($color = $text-color, $position = center)
-	font-rem(36)
-	line(46,36)
+	font-rem(32)
+	line(38,32)
 	color $color
 	text-align $position
 
 	+breakpoint-md()
-		font-rem(50)
-		line(60,50)
+		font-rem(46)
+		line(60,46)
 
 h2-title($color = $text-color, $position = left)
 	color $color
@@ -157,8 +157,8 @@ h4-title($color = $text-color, $position = left)
 //ссылки и кнопки
 btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700)
 	radius($radius)
-	font-rem(18)
-	line(24,18)
+	font-rem(15)
+	line(24,15)
 	font-weight $bold
 	text-transform uppercase
 	letter-spacing 0.54px
@@ -169,10 +169,9 @@ btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700)
 	padding 18px 27px
 	cursor pointer
 
-	/*&:hover
-		background-color $main-bg
-		color $white
-		border none*/
+	+breakpoint-md()
+		font-rem(18)
+		line(24,18)
 
 //сетка
 make-row()
