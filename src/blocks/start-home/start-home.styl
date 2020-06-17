@@ -6,7 +6,7 @@
 
 	+breakpoint-lg()
 		padding-bottom 60px
-		padding-top 60px
+		padding-top 80px
 
 	&__subtitle
 		@extend .lead
@@ -29,10 +29,10 @@
 
 		&-wrapper
 			margin-bottom 30px
-
 			+breakpoint-md()
 				display flex
 				flex-direction column-reverse
+				margin-bottom 50px
 
 	&__remark
 		display block
@@ -43,6 +43,11 @@
 
 		+breakpoint-md()
 			display none
+
+	&__img-wrapper
+		+breakpoint-lg()
+			margin-left -30px
+			margin-right -30px
 
 	&__btn
 		+breakpoint-up-to-md()
