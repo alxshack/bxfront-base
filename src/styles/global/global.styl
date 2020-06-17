@@ -127,21 +127,23 @@ address
 	&--white
 		@extend .white-color
 
-	&--md
-		font-rem(28)
-		line(34,28)
+.lead-lg
+	@extend .lead
+	font-rem(20)
+	line(25,20)
 
-		+breakpoint-md()
-			font-rem(30)
-			line(38,30)
+	+breakpoint-md()
+		font-rem(36)
+		line(48,36)
 
-	&--lg
-		font-rem(20)
-		line(25,20)
+.lead-md
+	@extend .lead
+	font-rem(28)
+	line(34,28)
 
-		+breakpoint-md()
-			font-rem(36)
-			line(48,36)
+	+breakpoint-md()
+		font-rem(30)
+		line(38,30)
 
 
 ul
