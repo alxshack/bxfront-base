@@ -1,0 +1,11 @@
+include ../../../global/_mixins
+
+section.section.section--light-yellow
+	.container
+		h2.heading-h2.heading-h2--center Нам доверяют
+
+		.logos-slider
+			.logos-slider__slides.js-logos-slider
+				each slide in logos
+					.logos-slider__slide
+						+logo(slide)
