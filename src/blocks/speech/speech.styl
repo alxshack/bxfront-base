@@ -1,0 +1,58 @@
+.speech
+	margin 0
+
+	+breakpoint-lg()
+		radius(20px)
+		bgimage('/backgrounds/speech.png')
+		overflow hidden
+		position relative
+		background-size contain
+		padding 49px 415px 55px 53px
+
+	&__footer
+		+breakpoint-up-to-lg()
+			flex-block()
+			align-items center
+
+	&__title
+		margin-bottom 20px
+
+		+breakpoint-lg()
+			margin-bottom 15px
+
+	&__author
+		font-weight 700
+
+		+breakpoint-up-to-lg()
+			width calc('100% - 120px')
+			padding-left 20px
+
+		&-img
+			size(120px,120px)
+			radius(50%)
+
+			+breakpoint-lg()
+				size(364px,406px)
+				radius(0)
+				position absolute
+				right 58px
+				top 49px
+
+			img
+				radius(50%)
+				width 100%
+				max-height 100%
+				vertical-align middle
+
+				+breakpoint-lg()
+					radius(0)
+
+
+
+	&__company-name
+		color #2F80ED
+		font-style normal
+
+
+
+

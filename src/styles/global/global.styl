@@ -44,6 +44,7 @@ p
 img
 	max-width 100%
 	height auto
+	max-height 100%
 
 address
 	font-style normal
@@ -166,6 +167,18 @@ a
 
 p
 	margin-top 0
+
+.page-overlay
+	display none
+
+	&.is-open-menu
+		display block
+		position fixed
+		top 0
+		bottom 0
+		right 0
+		left 0
+		background-color rgba(34, 44, 72, 0.5)
 
 .col
 	+breakpoint-up-to-md()

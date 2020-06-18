@@ -27,19 +27,16 @@ header.header
 							- let innerMenu = ['Тур','Денежные потоки','Автоматизация','Отчеты','Стоимость','Блог','О компании','Контакты']
 							+links-list(innerMenu)(class='inner-menu__list')
 
-							address
+							.inner-menu__contacts
 								a(href='tel:+74959958258').inner-menu__phone +7 495 995 82 58
-								-
-									var borderedLinksText =
-									[
-										'Заказать обратный звонок',
-										'*****@*******.ru',
-									];
-
+								- var borderedLinksText = ['Заказать обратный звонок','*****@*******.ru',];
 								+bordered-links-list(borderedLinksText)
 
-							a(href='#').btn-bordered Войти в личный кабинет
+							a(href='#').btn-bordered.inner-menu__btn Войти в личный кабинет
 
 							.inner-menu__bottom
-								+image('/logos/logo.svg', 'Лого', '164', '20')
+								.inner-menu__company-logo
+									+image('logos/logo.svg', 'Лого')
 
+								.inner-menu__company-name
+									span 1C-WiseAdvice. #[br.hide-up-to-lg] Дочерняя компания 1С
