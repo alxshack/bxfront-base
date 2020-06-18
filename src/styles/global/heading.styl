@@ -1,14 +1,19 @@
 .heading-h1
 	h1-title()
 
+	&--center-md
+		+breakpoint-md()
+			text-align center
+
+	&--center
+		text-align center
+
 	&--white
 		color $white
 
-.heading-h2
-	h1-title()
 
-	&--center
-		@extend .text-center
+.heading-h2
+	@extend .heading-h1
 
 .heading-h3
 	h3-title()

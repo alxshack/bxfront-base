@@ -1,8 +1,13 @@
 .start-home
-	@extend .section
+	padding-top 45px
+	padding-bottom 25px
 	text-align center
 	color $white
 	background-image linear-gradient(89.92deg, #4AAF26 -0.04%, #9ABE09 100.04%), #FFFBF0
+
+	+breakpoint-lg()
+		padding-top 80px
+		padding-bottom 60px
 
 	&__subtitle
 		margin-bottom 20px
@@ -10,28 +15,12 @@
 		+breakpoint-lg()
 			margin-bottom 0
 
-	&__heading
-		+breakpoint-md()
-			margin-bottom 40px
-
-		+breakpoint-lg()
-			margin-bottom 140px
-
-		&-wrapper
-			margin-bottom 30px
-			+breakpoint-md()
-				display flex
-				flex-direction column-reverse
-				margin-bottom 50px
-
 	&__remark
 		font-rem(14)
 		line(20,14)
-		display block
+		@extend .hide-up-to-md
 		margin-top 10px
-
-		+breakpoint-md()
-			display none
+		margin-bottom 10px
 
 	&__img-wrapper
 
@@ -40,6 +29,7 @@
 			margin-right -30px
 
 	&__btn
-
+		margin-bottom 30px
 		+breakpoint-up-to-md()
 			width 100%
+			margin-bottom 0
