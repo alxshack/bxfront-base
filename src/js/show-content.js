@@ -4,7 +4,7 @@ var ShowContent = {
 
   initialize: function () {
     this.btn = this.$('.js-show-content__btn');
-    this.hiddenContent = this.$('.js-show-content__content');
+    //this.hiddenContent = this.$('.js-show-content__content');
     var self = this;
   },
 
@@ -17,6 +17,7 @@ var ShowContent = {
     e.preventDefault();
 
     $(e.currentTarget).next('.js-show-content__content').slideToggle();
+    this.btn.toggleClass('open');
 
     // Если скрытую информацию и кнопку-триггер невозможно разместить в общем контейнере
     // Или скрытая информация расположена не после кнопки-триггера

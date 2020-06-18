@@ -100,6 +100,10 @@ line($line-height = 24, $font-size = 16)
 
 radius($val)
 	border-radius $val
+
+//letter-spacing
+spacing($size,$space)
+	letter-spacing ($size * $space) * 1px
 	
 //заголовки
 h1-title()
@@ -188,10 +192,10 @@ flex-block()
 	display flex
 	flex-wrap wrap
 
-padding--x($top, $bottom)
-	padding-top $top
-	padding-bottom $bottom
-
 centered-absolute-x()
 	left 50%
 	transform translateX(-50%)
+
+bgimage($path, $repeat = no-repeat)
+	background-image url("../assets/images/" + $path)
+	background-repeat $repeat
