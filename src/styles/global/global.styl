@@ -166,3 +166,9 @@ a
 
 p
 	margin-top 0
+
+.col
+	+breakpoint-up-to-md()
+		&:not(:last-child)
+			.checked-list
+				margin-bottom 14px /*@Todo: ещё подумать*/

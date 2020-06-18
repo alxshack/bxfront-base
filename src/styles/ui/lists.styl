@@ -4,3 +4,22 @@
 	&__item
 		&:not(:last-child)
 			margin-bottom 8px
+
+.checked-list
+	margin-bottom 0
+
+	> li
+		position relative
+		padding-left 29px
+
+		&::before
+			pseudo(absolute,15px,10px)
+			bgimage('/icons/icon-checked.svg')
+			background-size contain
+			left 0
+			top 8px
+
+		&:not(:last-child)
+			margin-bottom 14px
+
+
