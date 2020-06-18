@@ -21,17 +21,6 @@
 			+breakpoint-lg()
 				margin-right 20px
 
-
-		//&--open
-		//	+breakpoint-up-to-lg()
-		//		display block
-		//		position fixed
-		//		overflow-x hidden
-		//		left 0
-		//		top 0
-		//		right 0
-		//		bottom 0
-
 	&__buttons
 		@extend .hide-up-to-lg
 
@@ -51,6 +40,7 @@
 	&__toggle
 		size(26px,23px)
 		bgimage('/icons/icon-burger.svg')
+		background-size contain
 		cursor pointer
 		padding 0
 		background-color transparent
@@ -59,5 +49,14 @@
 		display block
 
 		&--open
-			background('icons/icon-close-red.svg')
+			bgimage('/icons/icon-cross.svg')
+			size(33px,33px)
+			top 20px
+			right 20px
+			z-index 99999
+			position fixed
+
+			+breakpoint-lg()
+				top 44px
+				right 49px
 

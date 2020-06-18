@@ -14,10 +14,32 @@ header.header
 				nav.main-nav.js-main-nav
 
 					- let mainMenuItems= ['Тур','Возможности','Тарифы']
-					+main-nav-list(mainMenuItems)(class='main-nav__list')
+					+links-list(mainMenuItems)(class='main-nav__list')
 
 					.main-nav__buttons
 						a(href='#').btn-light.main-nav__btn Войти
 						a(href='#').btn.btn--600.main-nav__btn Попробовать
 
 					button.main-nav__toggle.js-main-nav__toggle
+
+					.inner-menu.js-main-nav__inner-menu
+						.inner-menu__container
+							- let innerMenu = ['Тур','Денежные потоки','Автоматизация','Отчеты','Стоимость','Блог','О компании','Контакты']
+							+links-list(innerMenu)(class='inner-menu__list')
+
+							address
+								a(href='tel:+74959958258').inner-menu__phone +7 495 995 82 58
+								-
+									var borderedLinksText =
+									[
+										'Заказать обратный звонок',
+										'*****@*******.ru',
+									];
+
+								+bordered-links-list(borderedLinksText)
+
+							a(href='#').btn-bordered Войти в личный кабинет
+
+							.inner-menu__bottom
+								+image('/logos/logo.svg', 'Лого', '164', '20')
+

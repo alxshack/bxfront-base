@@ -1,9 +1,0 @@
-mixin dropdown-menu(content)
-	- var href = 'javascript:void(0)';
-	ul(class!=attributes.class)
-		each val in content
-			if content.href
-				href= content.href
-
-			li(class!=attributes.class+'-item')
-				a(class!=attributes.class + '-link')(href=href)= val

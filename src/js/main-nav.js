@@ -4,7 +4,7 @@ var MainNav = {
 
   initialize: function () {
     this.toggleBtn = this.$('.js-main-nav__toggle');
-    this.menuList = this.$('.js-main-nav__list');
+    this.innerMenu = this.$('.js-main-nav__inner-menu');
   },
 
   events: {
@@ -15,9 +15,11 @@ var MainNav = {
   toggleMenu: function (e) {
     e.preventDefault();
     this.toggleBtn.toggleClass('main-nav__toggle--open');
-    this.menuList.toggleClass('main-nav__list--open');
+    this.innerMenu.toggleClass('inner-menu--open')
+    $('.page-overlay').toggleClass('is-open-menu');
     $('body').toggleClass('is-open-menu');
   }
+
 };
 
 App.Control.install(MainNav);

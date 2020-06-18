@@ -140,10 +140,11 @@ h4-title($color = $text-color)
 		line(32,25)
 
 //ссылки и кнопки
-btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700)
+btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700, $border = none)
 	radius($radius)
 	font-rem(15)
 	line(24,15)
+	border $border
 	font-weight $bold
 	text-transform uppercase
 	letter-spacing 0.54px
