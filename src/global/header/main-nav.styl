@@ -1,6 +1,7 @@
 .main-nav
 	+breakpoint-lg()
 		flex-block()
+		justify-content space-between
 		align-items center
 
 	&__list
@@ -19,23 +20,22 @@
 
 		&-item
 			+breakpoint-lg()
-				margin-right 20px
+				&:not(:last-child)
+					margin-right 20px
 
 	&__buttons
 		@extend .hide-up-to-lg
-
-		+breakpoint-lg()
-			flex-block()
-			margin-right 21px
+		font-size 0
 
 	&__btn
 		font-rem(14)
 		line(19,14)
+		letter-spacing normal
 		padding 10px 15px
 
 		+breakpoint-lg()
-			&:not(:last-child)
-				margin-right 9px
+			&+&
+				margin-left 9px
 
 	&__toggle
 		size(26px,23px)

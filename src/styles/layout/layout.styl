@@ -12,8 +12,12 @@
 		+breakpoint-lg()
 			make-row()
 
-.col
+	&-column-reverse
+		+breakpoint-up-to-md()
+			display flex
+			flex-direction column-reverse
 
+.col
 	&-md
 		+breakpoint-md()
 			make-col-ready()
@@ -26,14 +30,20 @@
 			+breakpoint-md()
 				make-col(4)
 
-		&--2-5
-			+breakpoint-md()
-				make-col(5)
-
 		&--3-5
-			+breakpoint-sm()
+			+breakpoint-md()
 				make-col-ready()
 				make-col(7)
+
+		&--2-5
+			+breakpoint-md()
+				make-col-ready()
+				make-col(5)
+
+		&--2-3
+			+breakpoint-md()
+				make-col-ready()
+				make-col(8)
 
 	&-lg
 		+breakpoint-lg()

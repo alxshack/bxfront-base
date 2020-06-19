@@ -1,4 +1,11 @@
 .footer
+	position relative
+	&::before
+		pseudo(absolute, 100%, 2px)
+		top 0
+		//background-image linear-gradient(to right, $color-highlighted--tertiary 30%, $color-highlighted--secondary 70%, $color-highlighted--tertiary 100%)
+		background-image: linear-gradient(to right, $color-highlighted--tertiary 10%, $color-highlighted--secondary  10%, $color-highlighted--secondary 90%,  $color-highlighted--tertiary  90%);
+
 	&__top
 		padding-top 30px
 		padding-bottom 30px
