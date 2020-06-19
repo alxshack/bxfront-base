@@ -1,16 +1,44 @@
+.btn-style
+	radius(5px)
+	font-rem(15)
+	line(24,15)
+	padding 15px 20px
+
+	border none
+	font-weight 700
+	text-transform uppercase
+	letter-spacing 0.54px
+	color $white
+	background-color $color-highlighted
+	display inline-block
+	text-align center
+	cursor pointer
+
+	+breakpoint-md()
+		font-rem(18)
+		line(24,18)
+		padding 18px 27px
+
 .btn
-	btn-style()
+	@extend .btn-style
 
 	&--600
-		font-weight 600 !important
+		font-weight 600
 
 .btn-green
-	btn-style($white, $color-highlighted--secondary, 5px, 700)
+	@extend .btn-style
+	radius(5px)
+	background-color $color-highlighted--secondary
 
 .btn-bordered
-	btn-style($color-highlighted, transparent, 7px, 600, 2px solid, $color-highlighted)
+	@extend .btn-style
 	font-rem(16)
 	line(22,16)
+	radius(7px)
+	background-color transparent
+	color $color-highlighted
+	border 2px solid $color-highlighted
+	font-weight 600
 	text-transform none
 	padding 9px 26px
 	letter-spacing normal

@@ -130,56 +130,14 @@ address
 	align-items center
 	justify-content center
 
-.lead
-	@extend .light
-	margin-bottom 0
-
-	&--white
-		@extend .white-color
-
-	&--center-md
-		+breakpoint-md()
-			text-align center
-
-	&--center
-		text-align center
-
-.lead-lg
-	@extend .lead
-	font-rem(20)
-	line(25,20)
-
-	& + *
-		margin-top 20px
-
-	& + [class^='btn']
-			margin-top 30px
+.remark
+	font-rem(14)
+	line(20,14)
+	@extend .white-color
+	width 100%
 
 	+breakpoint-md()
-		font-rem(36)
-		line(48,36)
-
-		& + *
-			margin-top 30px
-
-		& + [class^='btn']
-				margin-top 50px
-
-.lead-md
-	@extend .lead
-	font-rem(28)
-	line(34,28)
-
-	& + *
-		margin-top 20px
-
-	+breakpoint-md()
-		font-rem(30)
-		line(38,30)
-
-		& + *
-			margin-top 30px
-
+		line(28,14)
 
 ul
 	list-style none

@@ -118,12 +118,12 @@ h1-title()
 
 h2-title()
 	font-rem(28)
-	line(38,28)
+	line(34,28)
 	margin-bottom 20px
 
 	+breakpoint-md()
-		font-rem(46)
-		line(56,46)
+		font-rem(36)
+		line(44,36)
 		margin-bottom 25px
 
 h3-title()
@@ -146,24 +146,25 @@ h4-title()
 		margin-bottom 15px
 
 //ссылки и кнопки
-btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700, $border = none)
-	radius($radius)
-	font-rem(15)
-	line(24,15)
-	border $border
-	font-weight $bold
-	text-transform uppercase
-	letter-spacing 0.54px
-	color $color
-	background-color $bg
-	display inline-block
-	text-align center
-	padding 18px 27px
-	cursor pointer
+//btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700, $border = none)
+//	radius($radius)
+//	font-rem(15)
+//	line(24,15)
+//	border $border
+//	font-weight $bold
+//	text-transform uppercase
+//	letter-spacing 0.54px
+//	color $color
+//	background-color $bg
+//	display inline-block
+//	text-align center
+//	padding 18px 27px
+//	cursor pointer
+//
+//	+breakpoint-md()
+//		font-rem(18)
+//		line(24,18)
 
-	+breakpoint-md()
-		font-rem(18)
-		line(24,18)
 
 //сетка
 make-row()
@@ -206,3 +207,16 @@ centered-absolute-x()
 bgimage($path, $repeat = no-repeat)
 	background-image url("../assets/images/" + $path)
 	background-repeat $repeat
+
+
+retina-bg($path, $bg-size)
+	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+			background-image url("../assets/images/" + $path)
+
+			if $bg-size == cover
+				background-size cover
+
+			else
+				background-size ($bg-size/2) auto
+
+
