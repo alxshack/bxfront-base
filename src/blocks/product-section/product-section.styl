@@ -4,19 +4,23 @@
 	background-size cover
 	color $white
 	text-align center
+	padding-top 50px
+	padding-bottom 50px
 
 	+breakpoint-lg()
 		text-align left
+		padding-top 46px
+		padding-bottom 49px
 
 	&__container
 		position relative
 		margin 0 auto
-		padding 50px 20px 50px 20px
-		max-width 996px
+		padding 0 20px 0 20px
+		max-width 966px
 		width 100%
 
 		+breakpoint-lg()
-			padding  46px 455px 49px 15px
+			padding  0 415px 0 15px
 
 	&__title
 		margin-bottom 20px
@@ -24,6 +28,9 @@
 	&__img-holder
 		max-width 85%
 		margin 0 auto 10px auto
+
+		img
+			vertical-align middle
 
 		+breakpoint-lg()
 			position absolute
@@ -34,7 +41,7 @@
 			max-width 477px
 
 		+breakpoint-xl()
-			right -41px
+			right -53px
 
 	&__footer
 		+breakpoint-lg()
@@ -48,7 +55,6 @@
 
 		+breakpoint-lg()
 			padding 13px 47px
-			width auto
 
 	&__text
 		@extend .light
@@ -61,3 +67,23 @@
 			font-rem(25)
 			line(36,25)
 			margin-bottom 40px
+
+		&-block
+			radius(10px)
+			width 100%
+			min-height 100px
+			display flex
+			align-items center
+			padding 14px 16px 14px 31px
+			background-color darken(saturate($color-highlighted--secondary, 14.57), 11.96)
+
+			&-wrap
+				+breakpoint-lg()
+					max-width 426px
+
+				.product-section__footer
+					width 100%
+					margin-top 20px
+
+			&+&
+				margin-top 10px
