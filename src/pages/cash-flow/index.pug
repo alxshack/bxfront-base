@@ -1,0 +1,99 @@
+extends ../../templates/main.pug
+
+block variables
+	-
+		let ourFeatures =
+			[
+				{
+					title:'Отсутствие ошибок',
+					text:'100% автоматизация системы избавляет вас от рутинного ручного труда и  сводит риски ошибок практически к нулю',
+					class:'document-loop'
+				},
+				{
+					title:'Простота настройки',
+					text:'Настройка и адаптация Управленки под специфику и структуру  вашего бизнеса  займёт не более одного дня',
+					class:'detail'
+				},
+				{
+					title:'Экспертная поддержка',
+					text:'Настройка и адаптация Управленки под специфику и структуру  вашего бизнеса  займёт не более одного дня',
+					class:'chat'
+				}
+			];
+	-
+		let experts =
+			[
+				{
+					name:'Анастасия Щербинина',
+					position: 'Директор департамента финансового аутсорсинга',
+					imgSrc:'img-anastasya-sherbina-sm.png'
+				},
+				{
+					name:'Юрий Мартынов',
+					position: 'Руководитель проектов в области управленческого учёта и финансового управления',
+					imgSrc:'img-juriy-martynov-sm.png'
+				},
+				{
+					name:'Иван Иванов ',
+					position: 'Эксперт-практик, консультант по методологии ведения управленческого учёта',
+					imgSrc:'img-ivan-ivanov.png'
+				}
+			];
+
+	-
+		let logos =
+		[
+			{
+				imgSrc:'logo-asus.png',
+				name: 'Асус',
+			},
+			{
+				imgSrc:'logo-iveco.png',
+				name: 'Iveco',
+			},
+			{
+				imgSrc:'logo-karo.png',
+				name: 'Каро',
+			},
+			{
+				imgSrc:'logo-balt.png',
+				name: 'Балтийская целлюлоза',
+			},
+			{
+				imgSrc:'logo-magafon.png',
+				name: 'Мегафон',
+			},
+			{
+				imgSrc:'logo-minsk-auto.png',
+				name: 'Минские автомобили',
+			},
+			{
+				imgSrc:'logo-asus.png',
+				name: 'Асус',
+			},
+			{
+				imgSrc:'logo-iveco.png',
+				name: 'Iveco',
+			},
+			{
+				imgSrc:'logo-karo.png',
+				name: 'Каро',
+			},
+			{
+				imgSrc:'logo-balt.png',
+				name: 'Балтийская целлюлоза',
+			},
+			{
+				imgSrc:'logo-magafon.png',
+				name: 'Мегафон',
+			},
+			{
+				imgSrc:'logo-minsk-auto.png',
+				name: 'Минские автомобили',
+			},
+		];
+
+block main-content
+	include ../../blocks/sections/cash-flow/our-features
+	include ../../blocks/sections/cash-flow/experts
+	include ../../blocks/sections/cash-flow/trust-us

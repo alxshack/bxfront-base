@@ -13,10 +13,10 @@
 		"markup": "markup",
 		"markupInclude": "pages",
 		"destination": {
-			"scripts": "markup/_include/js",
-			"styles": "markup/_include/css",
-			"sprites": "markup/_include/sprites",
-			"assets": "markup/_include/assets"
+			"scripts": "markup/include/js",
+			"styles": "markup/include/css",
+			"sprites": "markup/include/sprites",
+			"assets": "markup/include/assets"
 		}
 	},
 
