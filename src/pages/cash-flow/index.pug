@@ -2,6 +2,23 @@ extends ../../templates/main.pug
 
 block variables
 	-
+		let steps =
+			[
+				{
+					text:'Бухучёт учёт не даёт вам объективной картины бизнеса',
+					color:'green'
+				},
+				{
+					text:'Управленческий учёт даст понимание, куда реально уходят деньги',
+					color:'orange'
+				},
+				{
+					text:'Вы поймёте, какие прибыльные проекты финансируют убыточные',
+					color:'red'
+				}
+			];
+
+	-
 		let ourFeatures =
 			[
 				{
@@ -94,6 +111,7 @@ block variables
 		];
 
 block main-content
+	include ../../blocks/sections/cash-flow/steps
 	include ../../blocks/sections/cash-flow/our-features
 	include ../../blocks/sections/cash-flow/text-block
 	.container

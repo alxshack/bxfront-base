@@ -47,3 +47,18 @@
 
 		& + *
 			margin-top 30px
+
+.lead-sm
+	@extend .lead
+	font-rem(20)
+	line(25,20)
+
+	& + *
+		margin-top 20px
+
+	+breakpoint-md()
+		font-rem(25)
+		line(32,25)
+
+		& + *
+			margin-top 20px

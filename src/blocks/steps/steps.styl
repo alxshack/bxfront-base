@@ -1,0 +1,72 @@
+.step
+	position relative
+	display flex
+	flex-wrap wrap
+	align-items center
+
+	+breakpoint-md()
+		display block
+		text-align center
+
+	&__text
+		width calc('100% - 35px')
+		padding-left 15px
+
+		+breakpoint-md()
+			width 100%
+			padding-left 0
+
+	&__num
+		font-rem(60)
+		line(82,60)
+		@extend .light
+		position relative
+		width 35px
+
+
+		+breakpoint-md()
+			font-rem(90)
+			line(123,90)
+			width 100%
+			margin-bottom 11px
+
+			&::before
+				content ''
+				position absolute
+				right -50%
+				transform translateX(-50% + 15px)
+				top 50%
+				width 50%
+				height 16px
+				background-position center
+				background-size contain
+		
+		&--green
+			color $color-highlighted--secondary
+
+			+breakpoint-md()
+				&::before
+					bgimage('/icons/icon-arrow-green.svg')
+
+		&--red
+			color $color-highlighted
+
+		&--orange
+			color $color-highlighted--tertiary
+
+			+breakpoint-md()
+				&::before
+					bgimage('/icons/icon-arrow-orange.svg')
+
+.steps
+	+breakpoint-md()
+		make-row()
+
+	&__element
+		+breakpoint-up-to-md()
+			&:not(:last-child)
+				margin-bottom 20px
+
+		+breakpoint-md()
+			make-col-ready()
+			make-col(4)
