@@ -1,6 +1,31 @@
 section.section
 	.container
-		h2.heading-h1.heading-h2--center-md Анализируйте отчетность в бизнес-терминах
+		h2.heading-h1.heading-h2--center-md Анализируйте отчетность в #[br.hide-up-to-md] бизнес-терминах
 		p.lead-sm Деньги автоматически разносятся на проекты или статьи, а не только на юрлица.
 		.img-wrapper
 			+image('banners/img-banner-9.png','Анализируйте отчетность в бизнес-терминах')
+
+.section.section
+	.container
+		.row-md.row-column-reverse
+			.col-md.col-md--3-5.section__no-text
+				.img-wrapper
+					+image('banners/img-banner-10.png','Кассовый разрыв')
+
+			.col-md.col-md--2-5.section__text
+				h3.heading-h3 Предупреждение надвигающегося кассового разрыва
+				- var checkedList= ['Вы увидите надвигающийся кассовй разрыв и место его возникновения: юридическое лицо, счёт или кошелёк, направление бизнеса, проект, статью управленческих расходов','Прозрачность бизнес-счетов покажет вам внутренние резервы для предотвращения кассового разрыва'];
+				+list(checkedList)(class='checked-list checked-list--mb10')
+
+.section.section
+	.container
+		.row-md
+			.col-md.col-md--2-5.section__text
+				h3.heading-h3 Управление дебиторской и кредиторской задолженностью
+				p Платёжный календарь и план-факт анализ дадут вам:
+				- var checkedList= ['Понимание о просрочках по оплате ваших клиентов','Возможность планировать будущие расходы и находить источники их покрытия'];
+				+list(checkedList)(class='checked-list checked-list--mb10')
+
+			.col-md.col-md--3-5.section__no-text
+				.img-wrapper
+					+image('banners/img-banner-11.png','Платёжный календарь')

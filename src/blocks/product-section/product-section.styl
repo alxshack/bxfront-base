@@ -1,16 +1,32 @@
 .product-section
-	bgimage('backgrounds/product-section-green@2x.png')
-	//retina-bg('backgrounds/product-section-green@2x.png',2732px)
+	bgimage('backgrounds/bg-peaces@2x.png')
+	background-color $color-highlighted--secondary
 	background-size cover
 	color $white
 	text-align center
 	padding-top 50px
 	padding-bottom 50px
 
+	.product-section__card
+		background-color darken(saturate($color-highlighted--secondary, 14.57), 11.96)
+
+	&--black
+		background-color $text-color
+
+		.product-section__card
+			background-color rgba(#5A5A5A, 0.3)
+
 	+breakpoint-lg()
 		text-align left
 		padding-top 46px
 		padding-bottom 49px
+
+	&__top
+		margin-bottom 20px
+		container()
+
+		+breakpoint-lg()
+			margin-bottom 40px /*по договоренности с дизайнером*/
 
 	&__container
 		position relative
@@ -22,15 +38,47 @@
 		+breakpoint-lg()
 			padding  0 415px 0 15px
 
+		&--lefted
+			+breakpoint-lg()
+				padding  0 15px 0 415px
+
+			.product-section__img-holder
+				+breakpoint-lg()
+					left -53px
+					right auto
+
+			.product-section__wrap
+				+breakpoint-lg()
+					margin-left auto
+
 	&__title
 		margin-bottom 20px
 
 	&__img-holder
 		max-width 85%
 		margin 0 auto 10px auto
+		position relative
 
 		img
 			vertical-align middle
+
+		&--exel
+			margin-top 35px
+
+			&::before
+				content ''
+				position absolute
+				bgimage('icons/icon-exel.svg')
+				size(160px,130px)
+				background-size contain
+				top -35px
+				left 0
+
+			+breakpoint-lg()
+				&::before
+					top -100px
+					left -20px
+					size(277px,233px)
 
 		+breakpoint-lg()
 			position absolute
@@ -49,12 +97,14 @@
 			text-align center
 
 	&__btn
-		padding-top 15px
-		padding-bottom 15px
 		width 100%
 
 		+breakpoint-lg()
-			padding 13px 47px
+			min-width 363px
+
+		&+.remark
+			+breakpoint-lg()
+				margin-top 10px
 
 	&__text
 		@extend .light
@@ -68,22 +118,49 @@
 			line(36,25)
 			margin-bottom 40px
 
-		&-block
-			radius(10px)
+	&__card
+		radius(10px)
+		@extend .text-left
+		z-index 1
+		position relative
+		width 100%
+		min-height 100px
+		display flex
+		align-items center
+		padding 14px 16px 14px 31px
+
+		&+&
+			margin-top 10px
+
+		&-num
+			font-rem(60)
+			line(82,60)
+			@extend .light
+			width 28px
+
+			&--green
+				color $color-highlighted--secondary
+
+			&--orange
+				color $color-highlighted--tertiary
+
+			+breakpoint-md()
+				font-rem(70)
+				line(95,70)
+				width 35px
+
+		&-text
+			width calc('100% - 28px')
+			padding-left 20px
+
+			+breakpoint-md()
+				width calc('100% - 35px')
+				padding-left 22px
+
+	&__wrap
+		+breakpoint-lg()
+			max-width 426px
+
+		.product-section__footer
 			width 100%
-			min-height 100px
-			display flex
-			align-items center
-			padding 14px 16px 14px 31px
-			background-color darken(saturate($color-highlighted--secondary, 14.57), 11.96)
-
-			&-wrap
-				+breakpoint-lg()
-					max-width 426px
-
-				.product-section__footer
-					width 100%
-					margin-top 20px
-
-			&+&
-				margin-top 10px
+			margin-top 20px

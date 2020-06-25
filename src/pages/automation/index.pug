@@ -1,0 +1,84 @@
+extends ../../templates/main.pug
+
+block variables
+
+	-
+		let experts =
+		[
+			{
+				name:'Анастасия Щербинина',
+				position: 'Директор департамента финансового аутсорсинга',
+				imgSrc:'img-anastasya-sherbina-sm.png'
+			},
+			{
+				name:'Юрий Мартынов',
+				position: 'Руководитель проектов в области управленческого учёта и финансового управления',
+				imgSrc:'img-juriy-martynov-sm.png'
+			},
+			{
+				name:'Иван Иванов ',
+				position: 'Эксперт-практик, консультант по методологии ведения управленческого учёта',
+				imgSrc:'img-ivan-ivanov.png'
+			}
+		];
+
+	-
+		let logos =
+		[
+			{
+				imgSrc:'logo-asus.png',
+				name: 'Асус',
+			},
+			{
+				imgSrc:'logo-iveco.png',
+				name: 'Iveco',
+			},
+			{
+				imgSrc:'logo-karo.png',
+				name: 'Каро',
+			},
+			{
+				imgSrc:'logo-balt.png',
+				name: 'Балтийская целлюлоза',
+			},
+			{
+				imgSrc:'logo-magafon.png',
+				name: 'Мегафон',
+			},
+			{
+				imgSrc:'logo-minsk-auto.png',
+				name: 'Минские автомобили',
+			},
+			{
+				imgSrc:'logo-asus.png',
+				name: 'Асус',
+			},
+			{
+				imgSrc:'logo-iveco.png',
+				name: 'Iveco',
+			},
+			{
+				imgSrc:'logo-karo.png',
+				name: 'Каро',
+			},
+			{
+				imgSrc:'logo-balt.png',
+				name: 'Балтийская целлюлоза',
+			},
+			{
+				imgSrc:'logo-magafon.png',
+				name: 'Мегафон',
+			},
+			{
+				imgSrc:'logo-minsk-auto.png',
+				name: 'Минские автомобили',
+			},
+		];
+
+block intro
+	include ../../blocks/top-page/top-page
+	include ../../blocks/sections/automation/start
+
+block main-content
+	include ../../blocks/sections/automation/synergy
+	include ../../blocks/sections/automation/accounting-in-excel

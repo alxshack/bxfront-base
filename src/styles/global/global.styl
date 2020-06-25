@@ -151,7 +151,6 @@ address
 	line(32,18)
 	spacing(18,0.1)
 	@extend .semi-bold
-	margin-bottom 4px
 	color $color-highlighted
 	text-transform uppercase
 
@@ -177,6 +176,10 @@ p
 	img
 		vertical-align middle
 		box-shadow $box-shadow
+
+	&--no-shadow
+		img
+			box-shadow none
 
 .page-overlay
 	display none

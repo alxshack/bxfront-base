@@ -10,7 +10,8 @@ section.section
 			.col-md.col-md--2-5.section__text
 				h3.heading-h3 Прозрачность денежных потоков
 				- var checkedList= ['Детализируйте суммы вплоть до операций (drill down analysis)','Единое окно полнотекстового поиска по всем операциям позволит вам быстро отыскать необходимые данные по любым, даже неполным критериям.'];
-				+list(checkedList)(class='checked-list checked-list--mb10')
+				+list(checkedList)(class='checked-list')
+
 
 .section.section.info-section
 	.container
@@ -18,16 +19,16 @@ section.section
 			.col-md.col-md--2-5.section__text
 				h3.heading-h3 Мультивалютность
 				- var checkedList= ['В момент построения консолидированной отчетности приводим все платежи к рублю по курсу ЦБ на день оплаты','Легко создавайте операции перевода денег между валютными и рублёвыми счетами'];
-				+list(checkedList)(class='checked-list checked-list--mb10')
+				+list(checkedList)(class='checked-list')
 
-			.col-md.col-md--3-5.section__no-text
+			.col-md.col-md--3-5
 				.img-wrapper
 					+image('banners/img-banner-6.png','Мультивалютность')
 
 .section.section.info-section
 	.container
 		.row-md.row-column-reverse
-			.col-md.col-md--3-5.section__no-text
+			.col-md.col-md--3-5
 				.img-wrapper
 					+image('banners/img-banner7.png','Telegram')
 
@@ -35,5 +36,5 @@ section.section
 				h3.heading-h3 Все данные в вашем смартфоне
 				p Работайте с сервисом через Telegram — самый безопасный мессенджер:
 				- var checkedList= ['Вносите наличные расходы','Просматривайте остатки средств на всех счетах','Получайте актуальные отчёты прямо в телефон'];
-				+list(checkedList)(class='checked-list checked-list--mb10')
+				+list(checkedList)(class='checked-list')
 
