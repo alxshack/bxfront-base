@@ -50,7 +50,7 @@
 //const $$ = require('auto-require')();
 var _ = require('underscore');
 _.gulp = require('gulp');
-_.uglify = require('gulp-uglify');
+_.uglify = require('gulp-uglify-es').default;
 _.trycatch = require('trycatch');
 _.requireDir = require('require-dir');
 _.runSequence = require('gulp4-run-sequence');

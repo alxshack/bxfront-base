@@ -7,7 +7,7 @@ _.gulp.task('scripts:core:dist', function () {
 	return _.gulp.src([
 		'node_modules/jquery/dist/jquery.min.js',
 		'node_modules/underscore/underscore-min.js',
-		'node_modules/backbone/backbone-min.js',
+		'node_modules/canjs/dist/can.jquery.min.js',
 		'bower_components/slick-carousel/slick/slick.min.js',
 		'bower_components/select2/dist/js/select2.min.js',
 		'bower_components/tooltipster/dist/js/tooltipster.bundle.min.js',
