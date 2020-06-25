@@ -49,12 +49,14 @@
 			text-align center
 
 	&__btn
-		padding-top 15px
-		padding-bottom 15px
 		width 100%
 
 		+breakpoint-lg()
-			padding 13px 47px
+			min-width 363px
+
+		&+.remark
+			+breakpoint-lg()
+				margin-top 10px
 
 	&__text
 		@extend .light

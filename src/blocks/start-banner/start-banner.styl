@@ -14,21 +14,21 @@
 			line(63,46)
 
 	&__row
-		flex-block()
-		justify-content space-between
-		align-items center
+		+breakpoint-md()
+			make-row()
 
-	&__img-col
+	&__right
 		margin-top 20px
 
 		+breakpoint-lg()
+			make-col-ready()
+			make-col(7)
 			margin-top 0
 
-	&__text-col
-		width 100%
-
+	&__left
 		+breakpoint-lg()
-			max-width 386px
+			make-col-ready()
+			make-col(5)
 
 	&__list
 		margin-bottom 20px
@@ -47,11 +47,16 @@
 
 	&__btn
 		width 100%
+		padding-left 35px
+		padding-right 35px
+		margin-bottom 5px
 
 		+breakpoint-lg()
 			width auto
 
 	&__img-holder
+		text-align center
+
 		img
 			vertical-align middle
 
