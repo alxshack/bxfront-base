@@ -1,0 +1,44 @@
+.start-banner
+	background-image linear-gradient(90deg, #FFF7EA 0%, #E1F797 100%)
+	padding-bottom 25px
+	padding-top 25px
+
+	+breakpoint-lg()
+		padding-bottom 50px
+		padding-top 50px
+
+	&__heading
+		margin-bottom 20px
+
+		+breakpoint-md()
+			line(63,46)
+
+	&__row
+		flex-block()
+		justify-content space-between
+		align-items center
+
+	&__left
+		width 100%
+
+		+breakpoint-lg()
+			max-width 386px
+
+	&__list
+		margin-bottom 20px
+
+		+breakpoint-lg()
+			margin-bottom 35px
+
+	&__footer
+		display inline-block
+
+	&__preview-text
+		font-rem(18)
+		line(28,18)
+		margin-bottom 15px
+
+	&__img-holder
+		img
+			vertical-align middle
+

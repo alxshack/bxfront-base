@@ -140,11 +140,20 @@ address
 .remark
 	font-rem(14)
 	line(20,14)
-	@extend .white-color
+	//@extend .white-color
 	width 100%
 
 	+breakpoint-md()
 		line(28,14)
+
+.remark-red
+	font-rem(18)
+	line(32,18)
+	spacing(18,0.1)
+	@extend .semi-bold
+	margin-bottom 4px
+	color $color-highlighted
+	text-transform uppercase
 
 
 .column-reverse-up-to-md
