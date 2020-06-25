@@ -944,6 +944,7 @@ function ringoInit(regionCode) {
             this.installController('.js-partners-carousel-mob', 'appWidgetPartnersCarouselMob'); // Карусель "Наши партнеры мобилка"
             this.installController('.js-burger-mobile', 'appWidgetBurgerMobile'); // Обработчик нового мобильного меню
             this.installController('p.accordion', 'appWidgetBlogAccordion'); // Обработчик нового мобильного меню
+            this.installController('.js-logos-slider', 'appWidgetLogosSlider');
 
         }
     });

@@ -4,7 +4,7 @@
     pluginName: 'appWidgetLogosSlider'
   }, {
     init: function () {
-      this.$el.slick({
+      this.element.slick({
         dots: false,
         arrows:true,
         infinite: true,
@@ -24,4 +24,6 @@
     }
   });
 }(jQuery));
+
+
 
