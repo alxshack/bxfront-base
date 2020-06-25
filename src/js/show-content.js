@@ -1,3 +1,4 @@
+/**
 var ShowContent = {
   el: '.js-show-content',
   name: 'ShowContent',
@@ -30,3 +31,4 @@ var ShowContent = {
 };
 
 App.Control.install(ShowContent);
+ */

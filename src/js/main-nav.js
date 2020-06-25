@@ -1,3 +1,4 @@
+/**
 var MainNav = {
   el: '.js-main-nav',
   name: 'MainNav',
@@ -23,3 +24,5 @@ var MainNav = {
 };
 
 App.Control.install(MainNav);
+
+ */
