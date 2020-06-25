@@ -4,7 +4,7 @@ section.start-banner
 		h1.heading-h1.start-banner__heading Контроль денег в одном окне
 
 		.start-banner__row
-			.start-banner__left
+			.start-banner__text-col
 				p.start-banner__preview-text Консолидируйте денежные потоки всех компаний и кошельков в едином окне. Теперь вы всегда будете знать:
 				- var checkedList= ['Сколько денег в бизнесе','Где они находятся','Как они расходуются'];
 				+list(checkedList)(class='checked-list checked-list--lg-font start-banner__list')
@@ -12,6 +12,6 @@ section.start-banner
 					a(href='#').btn.start-banner__btn Попробовать бесплатно
 					.remark.text-center Полный доступ на 14 дней
 
-			.start-banner__right
+			.start-banner__img-col
 				.start-banner__img-holder
 					+image('banners/img-banner-8.svg','Денежные потоки')
