@@ -18,6 +18,12 @@
 		justify-content space-between
 		align-items center
 
+	&__right
+		margin-top 20px
+
+		+breakpoint-lg()
+			margin-top 0
+
 	&__left
 		width 100%
 
@@ -31,12 +37,19 @@
 			margin-bottom 35px
 
 	&__footer
-		display inline-block
+		+breakpoint-lg()
+			display inline-block
 
 	&__preview-text
 		font-rem(18)
 		line(28,18)
 		margin-bottom 15px
+
+	&__btn
+		width 100%
+
+		+breakpoint-lg()
+			width auto
 
 	&__img-holder
 		img
