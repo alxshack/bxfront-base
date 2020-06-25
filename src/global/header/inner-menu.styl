@@ -1,0 +1,82 @@
+.inner-menu
+	background-color $light-bg
+	position fixed
+	top 0
+	right -100%
+	opacity 0
+	transition all 0.4s
+	padding 40px 20px 54px 20px
+	bottom 0
+	width 100%
+	z-index -1
+
+	+breakpoint-lg()
+		width 36vw
+		padding 54px 64px 60px 60px
+
+	&--open
+		opacity 1
+		right 0
+		z-index 9999
+		overflow-y scroll
+
+	&__phone
+		font-weight 700
+		display block
+		margin-bottom 14px
+
+	&__contacts
+		margin-bottom 40px
+		font-weight 700
+
+	&__btn
+		margin-bottom 60px
+
+		+breakpoint-lg()
+			margin-bottom 40px
+
+	&__bottom
+		+breakpoint-lg()
+			flex-block()
+			align-items center
+
+	&__company
+		&-logo
+			+breakpoint-lg()
+				max-width 160px
+				margin-right 20px
+
+			img
+				vertical-align middle
+
+		&-name
+			+breakpoint-lg()
+				width calc('100% - 180px')
+				padding-left 19px
+				border-left 2px solid rgba(#C4C4C4, 0.4)
+
+			span
+				font-rem(13)
+				line(18,13)
+				display inline-block
+				color $text-color--secondary
+
+	&__list
+		margin-bottom 34px
+
+		+breakpoint-lg()
+			margin-bottom 40px
+
+		&-item
+			&:not(:last-child)
+				margin-bottom 20px
+
+		&-link
+			font-rem(20)
+			line(27,20)
+			font-weight 600
+
+
+	.bordered
+		font-rem(16)
+		line(22,16)

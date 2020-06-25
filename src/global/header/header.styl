@@ -1,0 +1,63 @@
+.header
+	padding-top 14px
+	padding-bottom 14px
+	background-color $white
+
+	+breakpoint-up-to-lg()
+		left 0
+		right 0
+		top 0
+		z-index 2
+		position fixed
+
+	+breakpoint-lg()
+		padding-top 15px
+		padding-bottom 16px
+
+	&__row
+		flex-block()
+		align-items center
+		justify-content space-between
+
+		+breakpoint-lg()
+			make-row()
+			justify-content flex-start
+
+	&__left
+		+breakpoint-lg()
+			make-col-ready()
+			make-col(5)
+			flex-block()
+
+	&__right
+		+breakpoint-lg()
+			make-col-ready()
+			make-col(7)
+
+	&__menu
+		+breakpoint-lg()
+			padding-left 15px
+		
+	&__logo
+		max-width 197px
+
+		img
+			vertical-align middle
+
+		+breakpoint-lg()
+			margin-right 19px
+
+	&__company
+		&-name
+			@extend .hide-up-to-lg
+
+			+breakpoint-lg()
+				width calc('100% - (197px + 19px)')
+				padding-left 17px
+				border-left 2px solid rgba(#C4C4C4, 0.4)
+
+			span
+				font-rem(13)
+				line(18,13)
+				display inline-block
+				color $text-color--secondary

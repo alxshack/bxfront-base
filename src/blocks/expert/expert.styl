@@ -1,0 +1,55 @@
+.expert
+	flex-block()
+
+	+breakpoint-md()
+		text-align center
+		display block
+
+	&__img-holder
+		size(80px,80px)
+
+		+breakpoint-md()
+			size(100px,100px)
+			margin 0 auto 25px auto
+
+		img
+			radius(50%)
+
+	&__text
+		width calc('100% - 80px')
+		padding-left 20px
+
+		+breakpoint-md()
+			width 100%
+			padding-left 0
+
+
+	&__position
+		color $text-color--secondary
+
+	&__name
+		margin-bottom 5px
+
+		+breakpoint-md()
+			margin-bottom 10px
+
+.experts
+	+breakpoint-md()
+		make-row()
+
+	&__element
+		+breakpoint-up-to-md()
+			&:not(:last-child)
+				margin-bottom 20px
+
+		+breakpoint-md()
+			make-col-ready()
+			make-col(4)
+//
+//.experts-section
+//	&__subtitle
+//		margin-bottom 20px
+//
+//		+breakpoint-md()
+//			margin-bottom 30px
+//			text-align center

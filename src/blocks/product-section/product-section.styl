@@ -1,0 +1,89 @@
+.product-section
+	bgimage('backgrounds/product-section-green@2x.png')
+	//retina-bg('backgrounds/product-section-green@2x.png',2732px)
+	background-size cover
+	color $white
+	text-align center
+	padding-top 50px
+	padding-bottom 50px
+
+	+breakpoint-lg()
+		text-align left
+		padding-top 46px
+		padding-bottom 49px
+
+	&__container
+		position relative
+		margin 0 auto
+		padding 0 20px 0 20px
+		max-width 966px
+		width 100%
+
+		+breakpoint-lg()
+			padding  0 415px 0 15px
+
+	&__title
+		margin-bottom 20px
+
+	&__img-holder
+		max-width 85%
+		margin 0 auto 10px auto
+
+		img
+			vertical-align middle
+
+		+breakpoint-lg()
+			position absolute
+			top 50%
+			transform translateY(-50%)
+			margin 0
+			right 0
+			max-width 477px
+
+		+breakpoint-xl()
+			right -53px
+
+	&__footer
+		+breakpoint-lg()
+			display inline-block /*чтобы цетровать текст внутри*/
+			text-align center
+
+	&__btn
+		padding-top 15px
+		padding-bottom 15px
+		width 100%
+
+		+breakpoint-lg()
+			padding 13px 47px
+
+	&__text
+		@extend .light
+		font-rem(28)
+		line(34,28)
+		margin-bottom 20px
+		//margin-bottom 30px
+
+		+breakpoint-md()
+			font-rem(25)
+			line(36,25)
+			margin-bottom 40px
+
+		&-block
+			radius(10px)
+			width 100%
+			min-height 100px
+			display flex
+			align-items center
+			padding 14px 16px 14px 31px
+			background-color darken(saturate($color-highlighted--secondary, 14.57), 11.96)
+
+			&-wrap
+				+breakpoint-lg()
+					max-width 426px
+
+				.product-section__footer
+					width 100%
+					margin-top 20px
+
+			&+&
+				margin-top 10px

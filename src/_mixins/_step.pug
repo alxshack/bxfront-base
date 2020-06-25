@@ -1,0 +1,4 @@
+mixin step(step,index)
+	.step
+		.step__num(class!='step__num--' + step.color)= index
+		p.step__text.lead-sm= step.text

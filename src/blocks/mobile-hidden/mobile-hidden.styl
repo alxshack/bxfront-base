@@ -1,0 +1,56 @@
+.mobile-hidden
+	&__content
+		display none
+		
+		+breakpoint-md()
+			display block !important
+			height auto !important
+
+	&__section
+		padding-top 15px
+		border-bottom 1px solid  $color-highlighted--quinary
+		border-top 1px solid  $color-highlighted--quinary
+
+		+breakpoint-up-to-md()
+			&:not(:first-child)
+				margin-top -1px
+
+		+breakpoint-md()
+			border-top none
+			border-bottom none
+
+	&__content
+		+breakpoint-up-to-md()
+			padding-bottom 15px
+
+	&__title
+		font-rem(16)
+		line(24,16)
+		spacing(16,-0.02)
+		position relative
+		color $color-highlighted
+		margin-bottom 15px
+
+		+breakpoint-up-to-md()
+			cursor pointer
+
+			&::before
+				pseudo(absolute,9px,4px)
+				bgimage('/icons/icon-arrow-dawn.svg')
+				transition all 0.3s
+				top 50%
+				margin-top -4.5px
+				background-size contain
+				right 0
+				z-index 1
+
+			&.open
+				color $text-color
+
+				&::before
+					transform rotate(-180deg)
+
+
+		+breakpoint-md()
+			color $text-color
+			margin-bottom 5px

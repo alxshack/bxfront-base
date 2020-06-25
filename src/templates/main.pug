@@ -4,8 +4,9 @@ html(lang="ru-RU" )
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		title brandsearch
-		link(rel="stylesheet" href="../../templates/main/css/main.min.css" media="screen")
+		title upravlenka
+		link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="../include/css/main.min.css" media="screen")
 		<!--[if IE]>
 		script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
 		<![endif]-->
@@ -13,7 +14,6 @@ html(lang="ru-RU" )
 	block variables
 
 	body
-
 		block header
 			include ../global/header/header.pug
 
@@ -25,7 +25,8 @@ html(lang="ru-RU" )
 			include ../global/footer/footer.pug
 
 		block modal
+			.page-overlay
 
 		block scripts
-			script(type="text/javascript" src="../../templates/main/js/core.min.js")
-			script(type="text/javascript" src="../../templates/main/js/main.min.js")
+			script(type="text/javascript" src="../include/js/core.min.js")
+			script(type="text/javascript" src="../include/js/main.min.js")

@@ -1,0 +1,5 @@
+mixin our-feature(feature)
+	.our-feature(class!='our-feature--' + feature.class)
+		.our-feature__text
+			h3.heading-h3.our-feature__title= feature.title
+			p.text-gray= feature.text

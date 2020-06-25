@@ -1,0 +1,37 @@
+.section.section.info-section
+	.container
+		.row-md.row-column-reverse
+			.col-md.col-md--3-5.section__no-text
+				.img-wrapper
+					+image('banners/img-banner-2.png','Информация для руководителя')
+
+			.col-md.col-md--2-5.section__text
+				h3.heading-h3 Весь спектр ключевой информации для руководителя
+				p Вы поймете
+				- var checkedList= ['какой из ваших проектов наименее прибыльный и почему','на что на самом деле расходуются деньги бизнеса','на что обратить внимание сегодня, чтобы увеличить прибыль завтра'];
+				+list(checkedList)(class='checked-list checked-list--mb10')
+
+.section.section.info-section
+	.container
+		.row-md
+			.col-md.col-md--2-5.section__text
+				h3.heading-h3 Экономьте время на извелечении данных
+				- var checkedList= ['Настройте интеграцию с банками и ваши выписки будут загружаться автоматически','Анализируйте отчетность сформированную автоматически по вашим проектам и статьям','Получайте отчеты на ваш смартфон','Управляйте кошельками с вашего телефона через telegam'];
+				+list(checkedList)(class='checked-list checked-list--mb10')
+
+			.col-md.col-md--3-5.section__no-text
+				.img-wrapper
+					+image('banners/img-banner-3.png','Экономия времени')
+
+.section.section.info-section
+	.container
+		.row-md.row-column-reverse
+			.col-md.col-md--3-5.section__no-text
+				.img-wrapper
+					+image('banners/img-banner-4.png','Информация для руководителя')
+
+			.col-md.col-md--2-5.section__text
+				h3.heading-h3 Анализируйте бизнес под любым углом
+				- var checkedList= ['Отчеты, обновляемые в реальном времени','Полная прозрачность механизма формирования сумм','Полнотекстовый поиск по операциям со всех счетов и кошельков','Требуется больше? Соберите и сохраните для дальнейшего использования отчет, который нужен именно вам.'];
+				+list(checkedList)(class='checked-list checked-list--mb10')
+

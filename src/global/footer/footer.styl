@@ -1,0 +1,103 @@
+.footer
+	position relative
+	&::before
+		pseudo(absolute, 100%, 2px)
+		top 0
+		//background-image linear-gradient(to right, $color-highlighted--tertiary 30%, $color-highlighted--secondary 70%, $color-highlighted--tertiary 100%)
+		background-image: linear-gradient(to right, $color-highlighted--tertiary 10%, $color-highlighted--secondary  10%, $color-highlighted--secondary 90%,  $color-highlighted--tertiary  90%);
+
+	&__top
+		padding-top 30px
+		padding-bottom 30px
+
+		+breakpoint-lg()
+			make-row()
+
+		&-col
+			+breakpoint-up-to-lg()
+				&:not(:last-child)
+					margin-bottom 30px
+
+			+breakpoint-lg()
+				make-col-ready()
+				make-col(4)
+
+	&__bottom
+		padding-top 30px
+		padding-bottom 30px
+		position relative
+
+		&::before
+			content ''
+			position absolute
+			top 0
+			display block
+			height 2px
+			right 0
+			left 0
+			width 100%
+			background-color $gray--lighten
+
+			+breakpoint-lg()
+				right 15px
+				left 15px
+				width calc('100% - 30px')
+
+		+breakpoint-lg()
+			make-row()
+			padding-bottom 60px
+
+		&-left-col,
+		&-right-col
+			+breakpoint-lg()
+				make-col-ready()
+
+		&-left-col
+			margin-bottom 20px
+			+breakpoint-lg()
+				make-col(8)
+				flex-block()
+				margin-bottom 0
+				align-items center
+
+		&-right-col
+			+breakpoint-lg()
+				make-col(4)
+
+
+	&__logo
+		display inline-block
+		margin-bottom 20px
+
+		img
+			vertical-align middle
+
+		+breakpoint-lg()
+			max-width 200px
+			margin-right 25px
+			margin-bottom 0
+
+	&__company
+		&-name
+			+breakpoint-lg()
+				max-width 177px
+				padding-left 22px
+				border-left 2px solid rgba(#C4C4C4, 0.4)
+
+			span
+				font-rem(13)
+				line(20,13)
+
+				display inline-block
+				color $text-color--secondary
+
+	&__phone
+		font-rem(24)
+		line(22,24)
+		@extend .semi-bold
+		display block
+		margin-bottom 10px
+
+		+breakpoint-lg()
+			margin-bottom 27px
+

@@ -1,0 +1,50 @@
+.our-feature
+	display flex
+	flex-wrap wrap
+
+	+breakpoint-md()
+		display block
+	
+	&::before
+		content ''
+		display inline-block
+		size(80px,80px)
+		background-repeat no-repeat
+		background-size contain
+		background-position center
+
+	&--document-loop
+		bgimage('/icons/icon-document-loop.svg')
+
+	&--chat
+		bgimage('/icons/icon-chat.svg')
+
+	&--detail
+		bgimage('/icons/icon-detail.svg')
+
+	&__text
+		width calc('100% - 80px')
+		padding-left 20px
+
+		+breakpoint-md()
+			padding-left 0
+			width 100%
+
+	&__title
+		margin-bottom 5px
+
+		+breakpoint-md()
+			margin-bottom 15px
+
+.our-features
+	+breakpoint-md()
+		make-row()
+
+	&__element
+		+breakpoint-up-to-md()
+			&:not(:last-child)
+				margin-bottom 20px
+
+		+breakpoint-md()
+			make-col-ready()
+			make-col(4)

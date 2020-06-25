@@ -78,89 +78,93 @@ pseudo($position, $width, $height)
 	display inline-block
 	size($width, $height)
 
+//position($top = auto,$right = auto,$bottom = auto,$left = auto)
+//	top $top
+//	right $right
+//	bottom $bottom
+//	left $left
+
 //размер шрифта, высота строки
 
-font-rem($size, $base-font-size = 18)
+font-rem($size, $base-font-size = 16)
 	font-size ($size / $base-font-size) * 1rem
 
-line($line-height = 28, $font-size = 18)
+line($line-height = 24, $font-size = 16)
 	line-height ($line-height / $font-size)
 
 //тень
-shadow($value = $box-shadow )
-	box-shadow $value
+/*shadow($value = $box-shadow )
+	box-shadow $value*/
 
 //радиус
 
 radius($val)
 	border-radius $val
+
+//letter-spacing
+spacing($size,$space)
+	letter-spacing ($size * $space) * 1px
 	
 //заголовки
-h1-title($color = $text-color, $position = center)
-	color $color
-	text-align $position
-	font-rem(36)
-	line(46,36)
-
-	+breakpoint-md()
-		font-rem(50)
-		line(60,50)
-
-h2-title($color = $text-color, $position = left)
-	color $color
-	text-align $position
-	font-rem(28)
-	line(38,28)
+h1-title()
+	font-rem(32)
+	line(38,32)
+	margin-bottom 20px
 
 	+breakpoint-md()
 		font-rem(46)
-		line(56,46)
+		line(60,46)
+		margin-bottom 30px
 
-h3-title($color = $text-color, $position = left)
-	color $color
-	text-align $position
-	font-rem(22)
-	line(30,22)
+h2-title()
+	font-rem(28)
+	line(34,28)
+	margin-bottom 20px
 
 	+breakpoint-md()
-		font-rem(35)
-		line(45,35)
+		font-rem(36)
+		line(44,36)
+		margin-bottom 25px
 
-h3-like-title()
-	font-rem(28)
-	line(38,28)
+h3-title()
+	font-rem(25)
+	line(30,25)
+	margin-bottom 20px
 
 	+breakpoint-md()
 		font-rem(30)
 		line(38,30)
 
-
-h4-title($color = $text-color, $position = left)
-	text-align $position
-	color $color
-	font-rem(24) /*@Todo:временно, так как не нашла значения в макетах*/
-	line(32,24) /*@Todo:временно, так как не нашла значения в макетах*/
+h4-title()
+	font-rem(20)
+	line(25,20)
+	margin-bottom 15px
 
 	+breakpoint-md()
-		font-rem(24)
-		line(32,24)
+		font-rem(25)
+		line(32,25)
+		margin-bottom 15px
 
 //ссылки и кнопки
-btn-style($color = $white, $bg = $color-highlighted)
-	color $color
-	background-color $bg
-	display inline-block
-	text-align center
-	padding 11px 20px
-	radius(5px)
-	font-rem(18)
-	line(28,18)
-	cursor pointer
+//btn-style($color = $white, $bg = $color-highlighted, $radius = 5px, $bold = 700, $border = none)
+//	radius($radius)
+//	font-rem(15)
+//	line(24,15)
+//	border $border
+//	font-weight $bold
+//	text-transform uppercase
+//	letter-spacing 0.54px
+//	color $color
+//	background-color $bg
+//	display inline-block
+//	text-align center
+//	padding 18px 27px
+//	cursor pointer
+//
+//	+breakpoint-md()
+//		font-rem(18)
+//		line(24,18)
 
-	&:hover
-		background-color $main-bg
-		color $white
-		border none
 
 //сетка
 make-row()
@@ -179,7 +183,7 @@ make-col($size)
 	flex 0 0 percentage($size / $columns)
 	max-width percentage($size / $columns)
 
-container($max-width = 1320px)
+container($max-width = 996px)
 	max-width $max-width
 	width 100%
 	padding-right 20px
@@ -196,10 +200,23 @@ flex-block()
 	display flex
 	flex-wrap wrap
 
-padding--x($top, $bottom)
-	padding-top $top
-	padding-bottom $bottom
-
 centered-absolute-x()
 	left 50%
 	transform translateX(-50%)
+
+bgimage($path, $repeat = no-repeat)
+	background-image url("../assets/images/" + $path)
+	background-repeat $repeat
+
+
+retina-bg($path, $bg-size)
+	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+			background-image url("../assets/images/" + $path)
+
+			if $bg-size == cover
+				background-size cover
+
+			else
+				background-size ($bg-size/2) auto
+
+

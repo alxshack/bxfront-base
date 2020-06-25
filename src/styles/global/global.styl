@@ -2,8 +2,9 @@ normalize()
 
 html
 	height 100%
-	font-size 112.5%
-	line-height 1.555
+	font-size 100%
+	line-height 1.5
+	font-family $primary-font-family
 	box-sizing border-box
 	-webkit-font-smoothing antialiased
 
@@ -16,10 +17,14 @@ body
 	height 100%
 	margin 0
 	padding 0
+	background-color $white
 	color $text-color
-	font-family $primary-font-family
+	padding-top 60px
 
-	&._is-open-menu
+	+breakpoint-lg()
+		padding-top 0
+
+	&.is-open-menu
 		overflow hidden
 
 h1,
@@ -29,7 +34,6 @@ h4,
 h5,
 h6
 	margin-top 0
-	font-family $secondary-font-family
 	margin-bottom 20px
 
 	+breakpoint-md()
@@ -44,6 +48,7 @@ p
 img
 	max-width 100%
 	height auto
+	max-height 100%
 
 address
 	font-style normal
@@ -68,7 +73,7 @@ address
 
 .hide-up-to-lg
 	+breakpoint-up-to-lg()
-		display none !important
+		display none
 
 
 .hide-up-to-xl
@@ -108,18 +113,76 @@ address
 .text-right
 	text-align right
 
+.bold
+	font-weight 700
 
+.text-gray
+	color  $text-color--secondary
+
+.semi-bold
+	font-weight 600
+
+.white-color
+	color $white
+
+.light
+	font-weight 300
+
+.text-small
+	font-rem(14)
+	line(22,14)
+	
+.centered
+	display flex
+	align-items center
+	justify-content center
+
+.remark
+	font-rem(14)
+	line(20,14)
+	@extend .white-color
+	width 100%
+
+	+breakpoint-md()
+		line(28,14)
+
+
+.column-reverse-up-to-md
+	+breakpoint-up-to-md()
+		display flex
+		flex-direction column-reverse
 ul
 	list-style none
 	padding 0
 	margin-top 0
 
 a
-	color $link-color
+	color $text-color
 	text-decoration none
 
-	&:hover
-		color $link-color-hover
 
 p
 	margin-top 0
+
+.img-wrapper
+	img
+		vertical-align middle
+		box-shadow $box-shadow
+
+.page-overlay
+	display none
+
+	&.is-open-menu
+		display block
+		position fixed
+		top 0
+		bottom 0
+		right 0
+		left 0
+		background-color rgba(34, 44, 72, 0.5)
+
+.col-md
+	+breakpoint-up-to-md()
+		&:not(:last-child)
+			.checked-list
+				margin-bottom 14px /*@Todo: ещё подумать*/

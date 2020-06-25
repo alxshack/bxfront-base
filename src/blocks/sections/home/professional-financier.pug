@@ -1,0 +1,15 @@
+include ../../../global/_mixins
+
+section.section
+	.container
+		h2.heading-h2.heading-h2--center-md Заменяет профессионального финансиста
+		.row-md
+			.col-md.col-md--1-3
+				- var checkedList = ['Отчетность формируется автоматически по принципу «настроил и забыл»','Устраняем человеческий фактор между денежными потоками и управленческой отчетностью.'];
+				+list(checkedList)(class='checked-list')
+			.col-md.col-md--1-3
+				- var checkedList = ['Никакой магии в формировании отчетов и режиме «черного ящика».','Просто в использовании. Просмотр отчетности будет занимать существенно меньше времени, при улучшении ее качества'];
+				+list(checkedList)(class='checked-list')
+			.col-md.col-md--1-3
+				- var checkedList = ['Мы всегда рядом, чтобы оперативно ответить на любые вопросы'];
+				+list(checkedList)(class='checked-list')

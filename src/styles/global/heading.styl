@@ -1,0 +1,31 @@
+.heading-h1
+	h1-title()
+
+	&--center-md
+		+breakpoint-md()
+			text-align center
+
+	&--center-up-to-md
+		+breakpoint-up-to-md()
+			text-align center
+
+	&--center
+		text-align center
+
+	&--white
+		color $white
+
+
+.heading-h2
+	@extend .heading-h1
+
+	&--sm
+		h2-title()
+
+
+.heading-h3
+	h3-title()
+
+.heading-h4
+	h4-title()
+

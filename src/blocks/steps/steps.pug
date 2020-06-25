@@ -1,0 +1,6 @@
+include ../../global/_mixins
+
+.steps
+	each step,index in steps
+		.steps__element
+			+step(step,index+1)

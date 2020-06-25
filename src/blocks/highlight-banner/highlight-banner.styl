@@ -1,0 +1,33 @@
+.highlight-banner
+	bgimage('/backgrounds/bg-highlight-banner@2x.jpg')
+	background-size cover
+	padding-top 70px
+	padding-bottom 50px
+	color $white
+	text-align center
+
+	+breakpoint-md()
+		padding-top 60px
+		padding-bottom 80px
+
+	&--no-figure
+		background-image none
+		background-color  $gray--darker
+
+	&__decoration
+		@extend .hide-up-to-md
+		size(100px,100px)
+		margin 0 auto 30px auto
+
+		img
+			max-height 100%
+			vertical-align middle
+
+	&__btn
+		width 100%
+
+		+breakpoint-md()
+			width auto
+
+			&:not(:last-child)
+				margin-bottom 10px
