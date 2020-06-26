@@ -1,26 +1,27 @@
 section.section
 	.container
 		h2.heading-h2.heading-h2--center-md Синергия с вашей 1С
-		.img-wrapper.img-wrapper--no-shadow.section__before-text
-			+image('banners/img-banner-13.svg','Управленка')
+		.row-column-reverse
+			.img-wrapper.img-wrapper--no-shadow.mb-50-md
+				+image('banners/img-banner-13.svg','Управленка')
 
-		.row-md
-			.col-md.col-md--1-3
-				- var checkedList= ['Автозагрузка плановых операций','Автозагрузка налогов, сборов и регулярных платежей (только для клиентов WA:Бухглатерия)'];
-				+list(checkedList)(class='checked-list')
+			.row-md
+				.col-md.col-md--1-3
+					- var checkedList= ['Автозагрузка плановых операций','Автозагрузка налогов, сборов и регулярных платежей (только для клиентов WA:Бухглатерия)'];
+					+list(checkedList)(class='checked-list')
 
-			.col-md.col-md--1-3
-				- var checkedList= ['Автозагрузка зарплатных начислений','Автозагрузка счетов на оплату покупателями'];
-				+list(checkedList)(class='checked-list')
+				.col-md.col-md--1-3
+					- var checkedList= ['Автозагрузка зарплатных начислений','Автозагрузка счетов на оплату покупателями'];
+					+list(checkedList)(class='checked-list')
 
-			.col-md.col-md--1-3
-				- var checkedList= ['Операции автоматически разносятся по проектам и статьям управленческого учета'];
-				+list(checkedList)(class='checked-list')
+				.col-md.col-md--1-3
+					- var checkedList= ['Операции автоматически разносятся по проектам и статьям управленческого учета'];
+					+list(checkedList)(class='checked-list')
 
 .section.section
 	.container
 		.row-md.row-column-reverse
-			.col-md.col-md--3-5.section__no-text
+			.col-md.col-md--3-5
 				.img-wrapper
 					+image('banners/img-banner-15.png','Бесшовная интеграция с банками')
 
@@ -37,16 +38,16 @@ section.section
 				- var checkedList= ['В каком бы юрлице, банке, счёте, кошельке наличных операция не возникла, она тут же будет разнесена','Гибкие правила разноски операций позволят реализовать сценарий любой сложности'];
 				+list(checkedList)(class='checked-list checked-list--mb10')
 
-			.col-md.col-md--3-5.section__no-text
+			.col-md.col-md--3-5
 				.img-wrapper
-					+image('banners/img-banner-5.png','Экономия времени')
+					+image('banners/img-banner-5.png','Проекты')
 
 .section.section
 	.container
 		.row-md.row-column-reverse
-			.col-md.col-md--3-5.section__no-text
+			.col-md.col-md--3-5
 				.img-wrapper
-					+image('banners/img-banner-16.png','Информация для руководителя')
+					+image('banners/img-banner-16.png','Ошибки')
 
 			.col-md.col-md--2-5.section__text
 				h3.heading-h3 Экономия времени на «изобретение» управленческой отчетности в таблицах
@@ -62,6 +63,6 @@ section.section
 				- var checkedList= ['Вносите расходы наличных средств','Просматривайте денежные остатки на всех счетах','Получайте актуальные отчёты прямо в телефон'];
 				+list(checkedList)(class='checked-list checked-list--mb10')
 
-			.col-md.col-md--3-5.section__no-text
+			.col-md.col-md--3-5
 				.img-wrapper
-					+image('banners/img-banner7.png','Экономия времени')
+					+image('banners/img-banner-17.png','Telegramm')

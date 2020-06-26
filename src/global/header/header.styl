@@ -49,15 +49,25 @@
 
 	&__company
 		&-name
+			position relative
+			font-rem(13)
+			line(18,13)
 			@extend .hide-up-to-lg
 
 			+breakpoint-lg()
 				width calc('100% - (197px + 19px)')
 				padding-left 17px
-				border-left 2px solid rgba(#C4C4C4, 0.4)
+
+				&::before
+					content ''
+					position absolute
+					left 0
+					width 1px
+					height calc('100% + 11px')
+					top 50%
+					transform translateY(-50%)
+					background-color rgba(#C4C4C4, 0.4)
 
 			span
-				font-rem(13)
-				line(18,13)
 				display inline-block
 				color $text-color--secondary

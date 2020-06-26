@@ -32,7 +32,7 @@
 			position absolute
 			top 0
 			display block
-			height 2px
+			height 1px
 			right 0
 			left 0
 			width 100%
@@ -79,15 +79,25 @@
 
 	&__company
 		&-name
+			position relative
+			font-rem(13)
+			line(20,13)
+
 			+breakpoint-lg()
 				max-width 177px
 				padding-left 22px
-				border-left 2px solid rgba(#C4C4C4, 0.4)
+
+				&::before
+					content ''
+					position absolute
+					left 0
+					width 1px
+					height calc('100% + 5px')
+					top 50%
+					transform translateY(-50%)
+					background-color rgba(#C4C4C4, 0.4)
 
 			span
-				font-rem(13)
-				line(20,13)
-
 				display inline-block
 				color $text-color--secondary
 
