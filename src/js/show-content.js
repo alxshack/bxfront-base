@@ -1,34 +1,25 @@
-/**
-var ShowContent = {
-  el: '.js-show-content',
-  name: 'ShowContent',
+(function ($) {
+  App.Widgets = App.Widgets || {};
+  App.Widgets.ShowContent = can.Control.extend({
+    pluginName: 'appWidgetShowContent'
+  }, {
+    init: function () {
+      this.btn = this.element.find('.js-show-content__btn');
+      var self = this;
 
-  initialize: function () {
-    this.btn = this.$('.js-show-content__btn');
-    //this.hiddenContent = this.$('.js-show-content__content');
-    var self = this;
-  },
+      this.btn.on('click', function (evt) {
+        evt.preventDefault();
 
-  events: {
-    'click .js-show-content__btn': 'showContent'
-  },
+        $(evt.currentTarget).next('.js-show-content__content').slideToggle();
+        self.btn.toggleClass('open');
 
-
-  showContent: function (e) {
-    e.preventDefault();
-
-    $(e.currentTarget).next('.js-show-content__content').slideToggle();
-    this.btn.toggleClass('open');
-
-    // Если скрытую информацию и кнопку-триггер невозможно разместить в общем контейнере
-    // Или скрытая информация расположена не после кнопки-триггера
-    if (this.$el.filter('[data-attribute]')) {
-      this.dataTarget = $(e.currentTarget).attr('data-attribute');
-      this.$el.find($('[data-target=' + this.dataTarget + ']')).slideToggle();
+        // Если скрытую информацию и кнопку-триггер невозможно разместить в общем контейнере
+        // Или скрытая информация расположена не после кнопки-триггера
+        if (self.element.filter('[data-attribute]')) {
+          this.dataTarget = $(evt.currentTarget).attr('data-attribute');
+          self.element.find($('[data-target=' + this.dataTarget + ']')).slideToggle();
+        }
+      });
     }
-
-  }
-};
-
-App.Control.install(ShowContent);
- */
+  });
+}(jQuery));

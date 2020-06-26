@@ -945,6 +945,8 @@ function ringoInit(regionCode) {
             // this.installController('.js-burger-mobile', 'appWidgetBurgerMobile'); // Обработчик нового мобильного меню
             // this.installController('p.accordion', 'appWidgetBlogAccordion'); // Обработчик нового мобильного меню
             this.installController('.js-logos-slider', 'appWidgetLogosSlider');
+            this.installController('.js-show-content', 'appWidgetShowContent');
+            this.installController('.js-main-nav', 'appWidgetMainNav');
         }
     });
 
