@@ -872,80 +872,79 @@ function ringoInit(regionCode) {
         initWidgets: function () {
             //this.installController('.js-header-menu', 'appWidgetsSearchHeader');
             //this.installController('.js-header-footer', 'appWidgetsMenu', {myOption: true});
-            this.installController('.js-push-event', 'appWidgetEventPush');
-            this.installController('.js-tabs', 'appWidgetTabs'); // переключение вкладок
-            this.installController('.js-oval-tabs', 'appWidgetOvalTabs'); // вкладки, которые могут содержать внутри себя дополнительные вкладки
-            this.installController('.js-menu', 'appWidgetDropdownMenu'); // выпадающее меню не выходит за пределы основного контейнера; открытие мобильного меню по клику
-            this.installController('.js-main-slider', 'appWidgetMainSlider'); // главный слайдер - эффект fadeIn/fadeOut, навигация в виде точек
-            this.installController('.js-payment-input', 'appPaymentInput');
-            this.installController('.js-clients-slider', 'appWidgetClientsSlider'); // слайдер логотипов клиентов - стандартный эффект owl, навигации нет
-            this.installController('.js-images-carousel', 'appWidgetImagesCarousel'); // Карусель из 4 изображений на десктопах
-            this.installController('.js-get-form', 'appWidgetFormGet'); // вызов формы
-            this.installController('.js-get-event-form', 'appWidgetEventFormGet'); // вызов формы Мероприятия
-            this.installController('.js-get-form-file', 'appWidgetFormGetFile'); // вызов формы
-            this.installController('.js-content-slider', 'appWidgetContentSlider'); // слайдер отзывов - стандартный эффект owl, навигация prev/next
-            this.installController('.js-sync-slider', 'appWidgetSyncSlider'); // слайдер отзывов - стандартный эффект owl, навигация prev/next
-            this.installController('.js-employee-reviews-slider', 'appWidgetEmployeeReviewsSlider'); // слайдер отзывов сотрудников - без автоматической прокрутки, навигация prev/next
-            this.installController('.js-slider', 'appWidgetSlider'); // слайдер мобильных приложений в подвале -эффект fadeIn/fadeOut, навигации нет
-            this.installController('.js-dotted-nav-slider', 'appWidgetDottedNavSlider'); // слайдер-карусель с навигацией в виде точек
-            this.installController('.js-dotted-nav-slider-no-auto', 'appWidgetDottedNavSliderNoAuto'); // слайдер-карусель с навигацией в виде точек без автопрокрутки
-            this.installController('.js-languages-switch', 'appWidgetLanguagesSwitch'); // изменение фона главного слайдера при переключении языков
-            this.installController('.js-show-info', 'appWidgetShowInfo'); // показ скрытой информации по клику на элемент
-            this.installController('.js-equal-height-blocks', 'appWidgetEqualHeightBlocks'); // блоки одинаковой высоты
-            this.installController('.js-scroll-to', 'appWidgetScrollTo'); // скролл к определенной части страницы по клику на элемент
-            this.installController('.js-accordion', 'appWidgetAccordion'); // компонент "аккордеон"
-            this.installController('.js-select', 'appWidgetCustomSelect'); // кастомизированный select
-            this.installController('.js-cost-calculator', 'appWidgetCostCalculator'); // калькулятор стоимости бухгалтерских услуг
-            this.installController('.js-off-canvas-mobile', 'appWidgetOffCanvasMobile'); // offcanvas меню для мобильных
-            this.installController('.js-filter', 'appWidgetFilter'); // фильтрация элементов
-            this.installController('.js-show-more', 'appWidgetShowMore'); // кнопка "Показать ещё"
-            this.installController('.js-clients-filter', 'appWidgetClientsFilter'); // Блок вкладок с клиентами
-            this.installController('.js-map', 'appWidgetMap'); // Инициализация yandex карты
-            this.installController('.js-changeable-contacts', 'appWidgetChangeableContacts'); // изменяемые контакты по селекту
-            this.installController('.js-print', 'appWidgetPrint'); // кастомная печать
-            this.installController('.js-back-to-top', 'appWidgetBackToTop'); // кнопка "Наверх"
-            this.installController('.js-news-archive', 'appWidgetNewsArchive'); // Фильтация новостей
-            this.installController('.js-form', 'appWidgetFormDummy'); // ответ формы при успешной отправке (заглушка, отключить в дальнейшем)
-            this.installController('.js-slider-form', 'appWidgetSliderForm'); // ответ формы при успешной отправке (заглушка, отключить в дальнейшем)
-            this.installController('.js-form-ajax', 'appWidgetFormAjax'); // обработчик ajax форм
-            this.installController('.js-form-default', 'appWidgetFormDefault'); // обработчик ajax форм без отправки в КИС
-            this.installController('.js-event-form-ajax', 'appWidgetEventFormAjax'); // обработчик ajax форм для Мероприятий
-            this.installController('.js-poll-form', 'appWidgetFormPoll'); // обработчик форм голосований
-            this.installController('.js-banner-lazy', 'appWidgetBannerLazyLoad'); // Ленивая загрузка баннеров
-            this.installController('.js-event-lazy', 'appWidgetEventLazyLoad'); // Ленивая загрузка Мероприятия
-            this.installController('.js-blog-archive', 'appWidgetBlogArchive'); // Фильтация блога
-            this.installController('.js-blog-tags', 'appWidgetBlogTags'); // Теги блога
-            this.installController('.js-lazy-load', 'appWidgetLazyLoad'); // Теги блога
-            this.installController('.js-tax-portfolio', 'appPaginationPortfolio'); // Постраничка для Портфолио налоговых проектов
-            this.installController('.js-long-table', 'appWidgetLongTable'); // Таблица с прилипающей при скролле шапкой
-            this.installController('.js-zero-reporting-test', 'appWidgetZeroReportingTest'); // Тест для определения нулевой отчётности
-            this.installController('.js-zero-reporting-payment', 'appWidgetZeroReportingPayment'); // Онлайн оплата нулевой отчётности
-            this.installController('.js-form-ajax-payment', 'appPaymentFormAjax');
-            this.installController('.js-zero-type-form', 'appPaymentFormZeroType');
-            this.installController('.js-zero-type-form-props-setter', 'appPaymentFormZeroPropsSet');
-            this.installController('.js-zero-contact-form', 'appPaymentFormZeroContact');
-            this.installController('.js-payment-input-zero-report', 'appPaymentZeroReportInput');
-            this.installController('.js-events-archive', 'appWidgetEventsArchive'); // Фильтhация блога
-            this.installController('.js-changes-control', 'appWidgetChanges'); // Фильтрация "Изменений в законодательстве"
-            this.installController('.js-mobile-app-tabs', 'appWidgetMobileAppTabs'); // Вкладки мобильного приложения
-            this.installController('.js-subscribe-popup', 'appSubscribePopup'); // Подписка во всплывающем окне
-            this.installController('.js-test-collect-form', 'appWidgetFormTestCollect');
-            this.installController('.js-lazyload', 'appWidgetNewLazyLoad');
-            this.installController('.js-show-search-form', 'appWidgetShowSearchForm'); // Показать форму поиска в шапке
-            this.installController('.js-flip-card', 'appWidgetFlipCard'); //Переворот картинок,
-            this.installController('.js-subscribe-form', 'appWidgetFormSubscribe'); // обработчик форм подписки
-            this.installController('.js-image-zoom-container', 'appImageZoom'); // zoom для изображений инструкции
-            this.installController('.js-push-quiz-events', 'appWidgetQuizEvents'); // Сбор и отправка событий блока Квиз
-
-            this.installController('.js-partners-carousel', 'appWidgetPartnersCarousel'); // Карусель "Наши партнеры"
-            this.installController('.js-partners-carousel-nav', 'appWidgetPartnersCarouselNav'); // Карусель "Наши партнеры" с навигацией
-            this.installController('.js-accounting-calc', 'appWidgetAccountingCalculator'); // Калькулятор стоимости услуг
-
-            this.installController('.js-partners-carousel-mob', 'appWidgetPartnersCarouselMob'); // Карусель "Наши партнеры мобилка"
-            this.installController('.js-burger-mobile', 'appWidgetBurgerMobile'); // Обработчик нового мобильного меню
-            this.installController('p.accordion', 'appWidgetBlogAccordion'); // Обработчик нового мобильного меню
+            // this.installController('.js-push-event', 'appWidgetEventPush');
+            // this.installController('.js-tabs', 'appWidgetTabs'); // переключение вкладок
+            // this.installController('.js-oval-tabs', 'appWidgetOvalTabs'); // вкладки, которые могут содержать внутри себя дополнительные вкладки
+            // this.installController('.js-menu', 'appWidgetDropdownMenu'); // выпадающее меню не выходит за пределы основного контейнера; открытие мобильного меню по клику
+            // this.installController('.js-main-slider', 'appWidgetMainSlider'); // главный слайдер - эффект fadeIn/fadeOut, навигация в виде точек
+            // this.installController('.js-payment-input', 'appPaymentInput');
+            // this.installController('.js-clients-slider', 'appWidgetClientsSlider'); // слайдер логотипов клиентов - стандартный эффект owl, навигации нет
+            // this.installController('.js-images-carousel', 'appWidgetImagesCarousel'); // Карусель из 4 изображений на десктопах
+            // this.installController('.js-get-form', 'appWidgetFormGet'); // вызов формы
+            // this.installController('.js-get-event-form', 'appWidgetEventFormGet'); // вызов формы Мероприятия
+            // this.installController('.js-get-form-file', 'appWidgetFormGetFile'); // вызов формы
+            // this.installController('.js-content-slider', 'appWidgetContentSlider'); // слайдер отзывов - стандартный эффект owl, навигация prev/next
+            // this.installController('.js-sync-slider', 'appWidgetSyncSlider'); // слайдер отзывов - стандартный эффект owl, навигация prev/next
+            // this.installController('.js-employee-reviews-slider', 'appWidgetEmployeeReviewsSlider'); // слайдер отзывов сотрудников - без автоматической прокрутки, навигация prev/next
+            // this.installController('.js-slider', 'appWidgetSlider'); // слайдер мобильных приложений в подвале -эффект fadeIn/fadeOut, навигации нет
+            // this.installController('.js-dotted-nav-slider', 'appWidgetDottedNavSlider'); // слайдер-карусель с навигацией в виде точек
+            // this.installController('.js-dotted-nav-slider-no-auto', 'appWidgetDottedNavSliderNoAuto'); // слайдер-карусель с навигацией в виде точек без автопрокрутки
+            // this.installController('.js-languages-switch', 'appWidgetLanguagesSwitch'); // изменение фона главного слайдера при переключении языков
+            // this.installController('.js-show-info', 'appWidgetShowInfo'); // показ скрытой информации по клику на элемент
+            // this.installController('.js-equal-height-blocks', 'appWidgetEqualHeightBlocks'); // блоки одинаковой высоты
+            // this.installController('.js-scroll-to', 'appWidgetScrollTo'); // скролл к определенной части страницы по клику на элемент
+            // this.installController('.js-accordion', 'appWidgetAccordion'); // компонент "аккордеон"
+            // this.installController('.js-select', 'appWidgetCustomSelect'); // кастомизированный select
+            // this.installController('.js-cost-calculator', 'appWidgetCostCalculator'); // калькулятор стоимости бухгалтерских услуг
+            // this.installController('.js-off-canvas-mobile', 'appWidgetOffCanvasMobile'); // offcanvas меню для мобильных
+            // this.installController('.js-filter', 'appWidgetFilter'); // фильтрация элементов
+            // this.installController('.js-show-more', 'appWidgetShowMore'); // кнопка "Показать ещё"
+            // this.installController('.js-clients-filter', 'appWidgetClientsFilter'); // Блок вкладок с клиентами
+            // this.installController('.js-map', 'appWidgetMap'); // Инициализация yandex карты
+            // this.installController('.js-changeable-contacts', 'appWidgetChangeableContacts'); // изменяемые контакты по селекту
+            // this.installController('.js-print', 'appWidgetPrint'); // кастомная печать
+            // this.installController('.js-back-to-top', 'appWidgetBackToTop'); // кнопка "Наверх"
+            // this.installController('.js-news-archive', 'appWidgetNewsArchive'); // Фильтация новостей
+            // this.installController('.js-form', 'appWidgetFormDummy'); // ответ формы при успешной отправке (заглушка, отключить в дальнейшем)
+            // this.installController('.js-slider-form', 'appWidgetSliderForm'); // ответ формы при успешной отправке (заглушка, отключить в дальнейшем)
+            // this.installController('.js-form-ajax', 'appWidgetFormAjax'); // обработчик ajax форм
+            // this.installController('.js-form-default', 'appWidgetFormDefault'); // обработчик ajax форм без отправки в КИС
+            // this.installController('.js-event-form-ajax', 'appWidgetEventFormAjax'); // обработчик ajax форм для Мероприятий
+            // this.installController('.js-poll-form', 'appWidgetFormPoll'); // обработчик форм голосований
+            // this.installController('.js-banner-lazy', 'appWidgetBannerLazyLoad'); // Ленивая загрузка баннеров
+            // this.installController('.js-event-lazy', 'appWidgetEventLazyLoad'); // Ленивая загрузка Мероприятия
+            // this.installController('.js-blog-archive', 'appWidgetBlogArchive'); // Фильтация блога
+            // this.installController('.js-blog-tags', 'appWidgetBlogTags'); // Теги блога
+            // this.installController('.js-lazy-load', 'appWidgetLazyLoad'); // Теги блога
+            // this.installController('.js-tax-portfolio', 'appPaginationPortfolio'); // Постраничка для Портфолио налоговых проектов
+            // this.installController('.js-long-table', 'appWidgetLongTable'); // Таблица с прилипающей при скролле шапкой
+            // this.installController('.js-zero-reporting-test', 'appWidgetZeroReportingTest'); // Тест для определения нулевой отчётности
+            // this.installController('.js-zero-reporting-payment', 'appWidgetZeroReportingPayment'); // Онлайн оплата нулевой отчётности
+            // this.installController('.js-form-ajax-payment', 'appPaymentFormAjax');
+            // this.installController('.js-zero-type-form', 'appPaymentFormZeroType');
+            // this.installController('.js-zero-type-form-props-setter', 'appPaymentFormZeroPropsSet');
+            // this.installController('.js-zero-contact-form', 'appPaymentFormZeroContact');
+            // this.installController('.js-payment-input-zero-report', 'appPaymentZeroReportInput');
+            // this.installController('.js-events-archive', 'appWidgetEventsArchive'); // Фильтhация блога
+            // this.installController('.js-changes-control', 'appWidgetChanges'); // Фильтрация "Изменений в законодательстве"
+            // this.installController('.js-mobile-app-tabs', 'appWidgetMobileAppTabs'); // Вкладки мобильного приложения
+            // this.installController('.js-subscribe-popup', 'appSubscribePopup'); // Подписка во всплывающем окне
+            // this.installController('.js-test-collect-form', 'appWidgetFormTestCollect');
+            // this.installController('.js-lazyload', 'appWidgetNewLazyLoad');
+            // this.installController('.js-show-search-form', 'appWidgetShowSearchForm'); // Показать форму поиска в шапке
+            // this.installController('.js-flip-card', 'appWidgetFlipCard'); //Переворот картинок,
+            // this.installController('.js-subscribe-form', 'appWidgetFormSubscribe'); // обработчик форм подписки
+            // this.installController('.js-image-zoom-container', 'appImageZoom'); // zoom для изображений инструкции
+            // this.installController('.js-push-quiz-events', 'appWidgetQuizEvents'); // Сбор и отправка событий блока Квиз
+            //
+            // this.installController('.js-partners-carousel', 'appWidgetPartnersCarousel'); // Карусель "Наши партнеры"
+            // this.installController('.js-partners-carousel-nav', 'appWidgetPartnersCarouselNav'); // Карусель "Наши партнеры" с навигацией
+            // this.installController('.js-accounting-calc', 'appWidgetAccountingCalculator'); // Калькулятор стоимости услуг
+            //
+            // this.installController('.js-partners-carousel-mob', 'appWidgetPartnersCarouselMob'); // Карусель "Наши партнеры мобилка"
+            // this.installController('.js-burger-mobile', 'appWidgetBurgerMobile'); // Обработчик нового мобильного меню
+            // this.installController('p.accordion', 'appWidgetBlogAccordion'); // Обработчик нового мобильного меню
             this.installController('.js-logos-slider', 'appWidgetLogosSlider');
-
         }
     });
 
@@ -1492,44 +1491,6 @@ $(function(){
     });
 });
 $(document).ready(function () {
-    // Удалим куку содержащую события GTM для блока Industry
-    if (getCookie('gtmIndustryEvents')) {
-        setCookie('gtmIndustryEvents', '', -86400);
-    }
-
-    // Интервал на отправку событий GTM для блока Industry 60 сек
-    let gtmIndustryInterval = setInterval(pushIndustryEvents, 60000);
-
-    /**
-     * Получение GTM событий по блоку Industry
-     */
-    function setIndustryGtmEvents() {
-        var gtmIndustryEvents = [];
-        $('.data-row-img-1 div.feature-item-img-active, .data-row-img-2 div.feature-item-img-active').each(function(index, value) {
-            gtmIndustryEvents.push('set_industry_' + $(this).data('event'));
-        });
-        if (gtmIndustryEvents.length > 0) {
-            setCookie('gtmIndustryEvents', gtmIndustryEvents, 24*60*60);
-            console.log(getCookie('gtmIndustryEvents').split(','));
-        }
-    }
-
-    /**
-     * Отправляем GTM события по блоку Industry
-     * @param events
-     */
-    function pushIndustryEvents() {
-        if (getCookie('gtmIndustryEvents')) {
-            var events = getCookie('gtmIndustryEvents').split(',');
-            if (typeof GTMpushEvent == 'function') {
-                events.forEach(function (value) {
-                    GTMpushEvent(value, 'BS_outsourcing', 'Industry');
-                });
-                // Удалим Интервал после первой отправки
-                clearInterval(gtmIndustryInterval);
-            }
-        }
-    }
 
     $('[data-popup-beige]').magnificPopup({
         type: 'inline'
@@ -2401,22 +2362,6 @@ $(document).ready(function() {
         }
     });
 
-    if($('.finance--block-bank_time_title') !== undefined) {
-        var financeNumAnimateStart = false;
-
-        $(window).scroll(function() {
-            if (financeCheckPosition() && !financeNumAnimateStart) {
-                financeNumAnimateStart = true;
-                financeNumAnimate();
-            }
-        });
-
-        if (financeCheckPosition()) {
-            financeNumAnimateStart = true;
-            financeNumAnimate();
-        }
-    }
-
     $(document).on('click', '.js-img-accounting-modal', function() {
         if($(window).width() <= 768) {
             var pswpElement = document.querySelectorAll('.pswp')[0];
@@ -2508,80 +2453,6 @@ function financeNumAnimate() {
         }
     });
 }
-
-function financeCheckPosition(){
-    // координаты дива
-    var div_position = $('.finance--block-bank_time_container').offset();
-    // отступ сверху
-    var div_top = div_position.top;
-    // отступ слева
-    var div_left = div_position.left;
-    // ширина
-    var div_width = $('.finance--block-bank_time_container').width();
-    // высота
-    var div_height = $('.finance--block-bank_time_container').height();
-
-    // проскроллено сверху
-    var top_scroll = $(document).scrollTop();
-    // проскроллено слева
-    var left_scroll = $(document).scrollLeft();
-    // ширина видимой страницы
-    var screen_width = $(window).width();
-    // высота видимой страницы
-    var screen_height = $(window).height();
-
-    // координаты углов видимой области
-    var see_x1 = left_scroll;
-    var see_x2 = screen_width + left_scroll;
-    var see_y1 = top_scroll;
-    var see_y2 = screen_height + top_scroll;
-
-    // координаты углов искомого элемента
-    var div_x1 = div_left;
-    var div_x2 = div_left + div_height;
-    var div_y1 = div_top;
-    var div_y2 = div_top + div_width;
-
-    if($(window).width() > 768) {
-        see_y1 = see_y2 - 100;
-    } else {
-        see_y1 += 400;
-    }
-
-    // проверка - виден див полностью или нет
-    if( div_x1 >= see_x1 /*&& div_x2 <= see_x2*/ && div_y1 <= see_y1 /*&& div_y2 <= see_y2*/ ){
-        return true;
-    } else {
-        return false;
-    }
-}
-
-(function ($) {
-
-    var uri = new URI(window.location.href);
-
-    // на основе языка подставляем нужный перевод для jQuery валидатору
-    switch (uri.segment(0)) {
-        case 'en':
-            msgRequired = 'Obligatory field "#FIELD_NAME#" not filled in.';
-            break;
-        case 'de':
-            msgRequired = 'Pflichtfeld "#FIELD_NAME#" wurde nicht ausgefüllt.';
-            break;
-        case 'fr':
-            msgRequired = 'Le champ obligatoire "#FIELD_NAME#" n’est pas renseigné.';
-            break;
-        default:
-            msgRequired = 'Не заполнено обязательное поле "#FIELD_NAME#".';
-    }
-
-    $.extend($.validator.messages, {
-        required: msgRequired,
-        email: 'Введен некорректный адрес email.',
-        number: 'Введите число.',
-        lang: uri.segment(0)
-    });
-}(jQuery));
 
 document.addEventListener('DOMContentLoaded', function() {
     $(document).find('.js-quiz-help').tooltipster({
@@ -3836,15 +3707,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         self.calculateCost(ui.value);
 
                     },
-                    change: function( event, ui ) {
-                        if (typeof GTMpushEvent == "function"){
-                            if (!getCookie('calcscroll')) {
-                                GTMpushEvent('calcscroll');
-                                GTMpushEvent('Form_Accounting_Calculator_Choosed_Revenue', 'Form_Accounting_Calculator');
-                                setCookie('calcscroll', 1, 24*60*60);
-                            }
-                        }
-                    }
                 });
 
                 this.button.on("click", this.submitForm);
@@ -3865,48 +3727,6 @@ document.addEventListener('DOMContentLoaded', function() {
             sendWhatEvent: function() {
                 if (typeof GTMpushEvent == "function"){
                     GTMpushEvent('Form_Accounting_Calculator_Click_What_Affects', 'Form_Accounting_Calculator');
-                }
-            },
-
-            // Расчёт стоимости
-            calculateCost: function(documentsNumber) {
-
-                if (typeof GTMpushEvent == "function"){
-                    if (!getCookie('CalculatorStart')) { GTMpushEvent('CalculatorStart'); setCookie('CalculatorStart', 1, 24*60*60); }
-                }
-
-                switch(true) {
-                    case documentsNumber < 5:
-                        this.printResult('Извините, мы специализируемся на обслуживании более крупных бизнесов', true);
-                        this.sendBlock.hide();
-                        break;
-                    case documentsNumber >= 5 && documentsNumber <= 29:
-                        this.printResult('30 – 55 тыс. руб.', false);
-                        this.sendBlock.show();
-                        break;
-                    case documentsNumber >= 30 && documentsNumber <= 55:
-                        this.printResult('50 – 85 тыс. руб.', false);
-                        this.sendBlock.show();
-                        break;
-                    case documentsNumber >= 56 && documentsNumber <= 80:
-                        this.printResult('65 – 100 тыс. руб.', false);
-                        this.sendBlock.show();
-                        break;
-                    case documentsNumber >= 81 && documentsNumber <= 106:
-                        this.printResult('90 – 130 тыс. руб.', false);
-                        this.sendBlock.show();
-                        break;
-                    case documentsNumber >= 107 && documentsNumber <= 131:
-                        this.printResult('100 – 150 тыс. руб.', false);
-                        this.sendBlock.show();
-                        break;
-                    case documentsNumber >= 132 && documentsNumber <= 165:
-                        this.printResult('Мы обслуживаем десятки бизнесов с выручкой от 200 млн до 4 млрд руб./год.  Будем рады предоставить Вам индивидуальный расчет при личной встрече.', true);
-                        this.sendBlock.show();
-                        break;
-                    default:
-                        this.printResult('индивидуальная', false);
-                        break;
                 }
             },
 
@@ -4545,26 +4365,6 @@ document.addEventListener('DOMContentLoaded', function() {
 }(jQuery));
 
 
-
-(function ($) {
-    App.Widgets.Widgets = App.Widgets.Widgets || {};
-    App.Widgets.Widgets.EventPush = can.Control.extend(
-        {
-            pluginName: 'appWidgetEventPush'
-        },
-        {
-            init: function () {
-                this.eventName = this.element.data('push--event');
-                var self = this;
-                this.element.click(function(e) {
-                    if (typeof GTMpushEvent == "function"){
-                        if (!getCookie(self.eventName)) { GTMpushEvent(self.eventName); setCookie(self.eventName, 1, 24*60*60); }
-                    }
-                });
-            }
-        }
-    );
-}(jQuery));
 (function ($) {
     App.Widgets.Widgets = App.Widgets.Widgets || {};
     App.Widgets.Widgets.EventsArchive = can.Control.extend(

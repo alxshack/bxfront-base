@@ -176,7 +176,10 @@ _.gulp.task('watch', function() {
 
     global.watch = true;
 
-    _.gulp.watch(_.gulp.localSourcePath + '/js/**/*.js', function(callback) {
+    _.gulp.watch([
+        _.gulp.localSourcePath + '/js/**/*.js',
+        _.gulp.localSourcePath + '/js_core/**/*.js'
+        ], function(callback) {
         _.runSequence(
             ['scripts:main:dist'],
             ['scripts:dest']
