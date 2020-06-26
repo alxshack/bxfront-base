@@ -1,5 +1,4 @@
 .product-section
-	bgimage('backgrounds/bg-peaces@2x.png')
 	background-color $color-highlighted--secondary
 	background-size cover
 	color $white
@@ -18,13 +17,17 @@
 
 	&--light
 		color $text-color
-		background-image url("../assets/images/backgrounds/bg-peaces@2x.png"), linear-gradient(90deg, #FFF1C6 0%, #FFD7CC 100%)
+		background-image linear-gradient(90deg, #FFF1C6 0%, #FFD7CC 100%)
 		background-repeat no-repeat
+
+		+breakpoint-lg()
+			background-image url("../assets/images/backgrounds/bg-peaces@2x.png"), linear-gradient(90deg, #FFF1C6 0%, #FFD7CC 100%)
 
 		.product-section__card
 			background-color $white
 
 	+breakpoint-lg()
+		bgimage('backgrounds/bg-peaces@2x.png')
 		text-align left
 		padding-top 46px
 		padding-bottom 45px
@@ -63,30 +66,12 @@
 		margin-bottom 20px
 
 	&__img-holder
-		max-width 85%
+		max-width 100%
 		margin 0 auto 10px auto
 		position relative
 
 		img
 			vertical-align middle
-
-		//&--exel
-		//	margin-top 35px
-		//
-		//	&::before
-		//		content ''
-		//		position absolute
-		//		bgimage('icons/icon-exel.svg')
-		//		size(160px,130px)
-		//		background-size contain
-		//		top -35px
-		//		left 0
-		//
-		//	+breakpoint-lg()
-		//		&::before
-		//			top -100px
-		//			left -20px
-		//			size(277px,233px)
 
 		+breakpoint-lg()
 			position absolute
@@ -98,6 +83,12 @@
 
 		+breakpoint-xl()
 			right -53px
+
+
+		&--exel
+			+breakpoint-lg()
+				top -20px
+				transform none
 
 	&__footer
 		+breakpoint-lg()
