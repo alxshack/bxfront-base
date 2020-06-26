@@ -41,9 +41,20 @@ h6
 
 p
 	margin-bottom 10px
+	margin-top 0
 
 	&:last-child
 		margin-bottom 0
+
+ul
+	list-style none
+	padding 0
+	margin-top 0
+
+a
+	color $text-color
+	text-decoration none
+
 
 img
 	max-width 100%
@@ -131,6 +142,12 @@ address
 .text-small
 	font-rem(14)
 	line(22,14)
+
+.mb-20-to-40
+	margin-bottom 20px
+
+	+breakpoint-md()
+		margin-bottom 40px
 	
 .centered
 	display flex
@@ -159,18 +176,6 @@ address
 	+breakpoint-up-to-md()
 		display flex
 		flex-direction column-reverse
-ul
-	list-style none
-	padding 0
-	margin-top 0
-
-a
-	color $text-color
-	text-decoration none
-
-
-p
-	margin-top 0
 
 .img-wrapper
 	img

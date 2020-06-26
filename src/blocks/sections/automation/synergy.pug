@@ -1,7 +1,7 @@
 section.section
 	.container
 		h2.heading-h2.heading-h2--center-md Синергия с вашей 1С
-		.img-wrapper.img-wrapper--no-shadow
+		.img-wrapper.img-wrapper--no-shadow.section__before-text
 			+image('banners/img-banner-13.svg','Управленка')
 
 		.row-md
@@ -16,3 +16,52 @@ section.section
 			.col-md.col-md--1-3
 				- var checkedList= ['Операции автоматически разносятся по проектам и статьям управленческого учета'];
 				+list(checkedList)(class='checked-list')
+
+.section.section
+	.container
+		.row-md.row-column-reverse
+			.col-md.col-md--3-5.section__no-text
+				.img-wrapper
+					+image('banners/img-banner-15.png','Бесшовная интеграция с банками')
+
+			.col-md.col-md--2-5.section__text
+				h3.heading-h3 Бесшовная интеграция с банками
+				p Все поступления и оплаты автоматически отобразятся в сервисе.
+
+
+.section.section
+	.container
+		.row-md
+			.col-md.col-md--2-5.section__text
+				h3.heading-h3 Автоматическое разнесение операций по проектам и статьям
+				- var checkedList= ['В каком бы юрлице, банке, счёте, кошельке наличных операция не возникла, она тут же будет разнесена','Гибкие правила разноски операций позволят реализовать сценарий любой сложности'];
+				+list(checkedList)(class='checked-list checked-list--mb10')
+
+			.col-md.col-md--3-5.section__no-text
+				.img-wrapper
+					+image('banners/img-banner-5.png','Экономия времени')
+
+.section.section
+	.container
+		.row-md.row-column-reverse
+			.col-md.col-md--3-5.section__no-text
+				.img-wrapper
+					+image('banners/img-banner-16.png','Информация для руководителя')
+
+			.col-md.col-md--2-5.section__text
+				h3.heading-h3 Экономия времени на «изобретение» управленческой отчетности в таблицах
+				- var checkedList= ['Экономия времени на «изобретение» управленческой отчетности в таблицах','Доверьте рутину по сбору и консолидации информации роботу, который никогда не ошибется'];
+				+list(checkedList)(class='checked-list checked-list--mb10')
+
+.section.section
+	.container
+		.row-md
+			.col-md.col-md--2-5.section__text
+				h3.heading-h3 Все данные в вашем смартфоне
+				p Работайте с сервисом через Telegram — самый безопасный мессенджер
+				- var checkedList= ['Вносите расходы наличных средств','Просматривайте денежные остатки на всех счетах','Получайте актуальные отчёты прямо в телефон'];
+				+list(checkedList)(class='checked-list checked-list--mb10')
+
+			.col-md.col-md--3-5.section__no-text
+				.img-wrapper
+					+image('banners/img-banner7.png','Экономия времени')
