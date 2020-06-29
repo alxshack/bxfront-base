@@ -947,6 +947,8 @@ function ringoInit(regionCode) {
             this.installController('.js-logos-slider', 'appWidgetLogosSlider');
             this.installController('.js-show-content', 'appWidgetShowContent');
             this.installController('.js-main-nav', 'appWidgetMainNav');
+            this.installController('.js-tabs', 'appWidgetTabList');
+            this.installController('.js-fancy-modal-tabs', 'appWidgetFancyTabs');
         }
     });
 

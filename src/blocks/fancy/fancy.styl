@@ -1,0 +1,24 @@
+.fancybox
+	&-tabs-modal
+		width 100% !important
+		max-width 90%
+
+		+breakpoint-md()
+			max-width 966px
+
+		.fancybox-inner
+			width 100% !important
+
+		.fancybox-close
+			size(40px,40px)
+			bgimage('icons/icon-close-white.svg')
+			top -40px
+			right -40px
+			position absolute
+			background-position center
+			background-size contain
+
+			+breakpoint-md()
+				size(70px,70px)
+				top -70px
+				right -70px

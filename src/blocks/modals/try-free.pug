@@ -1,0 +1,78 @@
+.modal#fancy-tabs
+	.modal-tabs.js-tabs
+		ul.modal-tabs__list.js-tabs__list
+			li.modal-tabs__item
+				a(href='javascript:void(0);' data-id='demo-dannye').modal-tabs__link.js-tabs__tab.is-active  Демо-данные
+
+			li.modal-tabs__item
+				a(href='javascript:void(0);' data-id='demo-dannye-2').modal-tabs__link.js-tabs__tab  Демо на ваших данных
+
+		.modal-tabs__body
+			#demo-dannye.modal-tabs__content.js-tabs__content.is-active
+				.modal-tabs__row
+					.modal-tabs__col
+						h4.heading-h4 Получите бесплатный #[br.hide-up-to-md] доступ с демо-данными
+						p Вы можете познакомиться с сервисом на готовых демонстрационных данных.
+
+
+					.modal-tabs__col
+						form.form
+							.form__group
+								label(for='name').form__label Ваше имя
+								input(type='text' name='name' id='name').field.form__input
+
+							.form__group
+								label(for='phone').form__label Ваш телефон
+								input(type='tel' name='phone' id='phone').field.form__input
+
+							.form__group
+								label(for='email').form__label Ваш email
+								input(type='email' name='email' id='email').field.form__input
+
+							.form__footer
+								button(type='submit').btn.form__btn Начать
+								.form__group
+									input.form__checkbox(type='checkbox' id='privacy-2')
+									label(for='privacy-2').form__checkbox-label Соглашаюсь на обработку #[a(href='#') персональных данных]
+
+			#demo-dannye-2.modal-tabs__content.js-tabs__content
+				.modal-tabs__row
+					.modal-tabs__col
+						h4.heading-h4 Примерьте сервис #[br.hide-up-to-md]  к вашему бизнесу
+						p Если вы:
+						- var checkedList= ['затрудняетесь с чего начать','уже пробовали вести управленческую отчетность','хотите увидеть демо сервиса на реальных данных','или все сразу'];
+						+list(checkedList)(class='checked-list checked-list--mb10 modal-tabs__checked-list')
+						p Мы с радостью все настроим и покажем. #[br] Будет интересно!
+
+
+					.modal-tabs__col
+						form.form
+							.form__group
+								input.form__checkbox(type='checkbox' id='privacy')
+								label(for='privacy').form__checkbox-label.form__checkbox-label--lg Согласен на бесплатное демо с экспертом
+
+							.form__group
+								label(for='name-2').form__label Ваше имя
+								input(type='text' name='name' id='name-2').field.form__input
+
+							.form__group
+								label(for='phone-2').form__label Ваш телефон
+								input(type='tel' name='phone' id='phone-2').field.form__input
+
+							.form__group
+								label(for='email-3').form__label Ваш email
+								input(type='email' name='email' id='email-3').field.form__input
+
+							.form__group
+								label(for='email').form__label Удобное время и способ связи
+								input(type='text' name='time' id='time').field.form__input
+
+							.form__group
+								label(for='industry').form__label Отрасль бизнеса
+								input(type='text' name='industry' id='industry').field.form__input
+
+							.form__footer
+								button(type='submit').btn.form__btn Отправить
+								.form__group
+									input.form__checkbox(type='checkbox' id='privacy-1')
+									label(for='privacy-1').form__checkbox-label Соглашаюсь на обработку #[a(href='#') персональных данных]
