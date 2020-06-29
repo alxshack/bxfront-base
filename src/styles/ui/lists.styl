@@ -33,4 +33,32 @@
 			font-rem(18)
 			line(28,18)
 
+.checked-bullet-list
+	> li
+		font-rem(16)
+		line(24,16)
+		position relative
+		padding-left 41px
+
+		&:not(:last-child)
+			margin-bottom 13px
+
+		&::before
+			content ''
+			position absolute
+			size(26px,26px)
+			radius(50%)
+			bgimage('icons/icon-checked-white.svg')
+			top 50%
+			margin-top -13px
+			left 0
+			background-position center
+			background-color #F9B543
+
+	&--green
+		>li
+			&::before
+				background-color #9CC801
+
+
 

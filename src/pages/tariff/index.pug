@@ -1,0 +1,86 @@
+extends ../../templates/main.pug
+
+block variables
+	-
+		let experts =
+		[
+			{
+				name:'Анастасия Щербинина',
+				position: 'Директор департамента финансового аутсорсинга',
+				imgSrc:'img-anastasya-sherbina-sm.png'
+			},
+			{
+				name:'Юрий Мартынов',
+				position: 'Руководитель проектов в области управленческого учёта и финансового управления',
+				imgSrc:'img-juriy-martynov-sm.png'
+			},
+			{
+				name:'Иван Иванов ',
+				position: 'Эксперт-практик, консультант по методологии ведения управленческого учёта',
+				imgSrc:'img-ivan-ivanov.png'
+			}
+		];
+
+	-
+		let logos =
+		[
+			{
+				imgSrc:'logo-asus@2x.png',
+				name: 'Асус',
+			},
+			{
+				imgSrc:'logo-iveco@2x.png',
+				name: 'Iveco',
+			},
+			{
+				imgSrc:'logo-karo.png',
+				name: 'Каро',
+			},
+			{
+				imgSrc:'logo-balt@2x.png',
+				name: 'Балтийская целлюлоза',
+			},
+			{
+				imgSrc:'logo-magafon@2x.png',
+				name: 'Мегафон',
+			},
+			{
+				imgSrc:'logo-minsk-auto@2x.png',
+				name: 'Минские автомобили',
+			},
+			{
+				imgSrc:'logo-asus@2x.png',
+				name: 'Асус',
+			},
+			{
+				imgSrc:'logo-iveco@2x.png',
+				name: 'Iveco',
+			},
+			{
+				imgSrc:'logo-karo.png',
+				name: 'Каро',
+			},
+			{
+				imgSrc:'logo-balt@2x.png',
+				name: 'Балтийская целлюлоза',
+			},
+			{
+				imgSrc:'logo-magafon@2x.png',
+				name: 'Мегафон',
+			},
+			{
+				imgSrc:'logo-minsk-auto@2x.png',
+				name: 'Минские автомобили',
+			},
+		];
+
+
+block main-content
+	include ../../blocks/sections/tariff/intro
+	include ../../blocks/text-block/text-block
+	.container
+		include ../../blocks/speech/speech
+	include ../../blocks/sections/tariff/experts
+	include ../../blocks/sections/tariff/trust-us
+	include ../../blocks/sections/cash-flow/business-understanding
+	include ../../blocks/sections/tariff/our-tools

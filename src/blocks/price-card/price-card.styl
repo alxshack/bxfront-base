@@ -1,0 +1,85 @@
+.price-card
+	radius(10px)
+	&--active
+		.price-card__wrap
+			background-color $white
+
+	&__wrap
+		radius(10px)
+		background-color #F8F4EB
+		box-shadow 0 10px 25px rgba(0, 0, 0, 0.15)
+
+	&--active
+		background-color $white
+
+
+	&__top
+		text-align center
+		padding 40px 40px 15px 40px
+		border-bottom 1px solid #E6DBCC
+
+		+breakpoint-md()
+			min-height 175px
+			padding-bottom 30px
+
+	&__heading
+		margin-bottom 15px
+
+		+breakpoint-md()
+			margin-bottom 20px
+
+	&__content
+		padding 30px 30px 44px 30px
+
+		+breakpoint-md()
+			padding 30px 40px 60px 40px
+
+	&__btn
+		width 100%
+		border-radius 0 0 10px 10px
+
+.price-cards
+	&--centered
+		align-items center
+
+	&--no-indent
+		+breakpoint-md()
+			display flex
+			flex-wrap wrap
+
+		.price-card
+			+breakpoint-up-to-md()
+				&:not(:last-child)
+					margin-bottom 20px
+
+			+breakpoint-md()
+				flex 0 0 50%
+				max-width 50%
+				position relative
+				width 100%
+
+				&:not(.price-card--active)
+					margin-right -7px
+
+			&--active
+				+breakpoint-md()
+					flex 0 0 calc('50% + 7px')
+					max-width calc('50% + 7px')
+
+	&--two-columns
+		+breakpoint-md()
+			make-row()
+
+		.price-card
+			+breakpoint-md()
+				make-col(6)
+				make-col-ready()
+
+	&--equal-height
+		.price-card
+			+breakpoint-md()
+				display flex
+				flex-direction column
+
+			&__content
+				flex-grow 1
