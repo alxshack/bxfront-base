@@ -1,0 +1,16 @@
+section.start-banner
+	.container
+		.remark-red Отчеты
+		h1.heading-h1 Управленческая отчётность  в реальном времени
+
+		.start-banner__row
+			.start-banner__left
+				- var checkedList= ['Гибкие отчёты строятся автоматически','Позволят проанализировать бизнес в любых разрезах и так глубоко, как считаете нужным','Доступны на вашем телефоне'];
+				+list(checkedList)(class='checked-list checked-list--mb10 start-banner__list')
+				.start-banner__footer
+					a(href='#').btn.start-banner__btn Попробовать бесплатно
+					.remark.text-center Полный доступ на 14 дней
+
+			.start-banner__right
+				.start-banner__img-holder
+					+image('banners/img-banner-18.svg','Отчеты')
