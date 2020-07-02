@@ -16,11 +16,23 @@
 		width 50%
 		text-align center
 
+		&:not(:last-child)
+			.modal-tabs__link
+				border-right 1px solid #DADADA
+
+		&:first-child
+			.modal-tabs__link
+				border-radius 10px 0 0 0
+
+		&:last-child
+			.modal-tabs__link
+				border-radius 0 10px 0 0
+
 	&__link
 		@extend .bold
 		font-rem(18)
 		line(25,20)
-		border-radius 10px 10px 0 0
+		//border-radius 10px 10px 0 0
 		display flex
 		align-items center
 		justify-content center
@@ -29,15 +41,14 @@
 		color $color-highlighted
 		padding 20px 10px
 		border-bottom 3px solid  transparent
-		box-shadow -5px 15px 30px rgba(0, 0, 0, 0.1)
-
+		box-shadow 5px 0 30px rgba(0, 0, 0, 0.1)
 
 		+breakpoint(370px)
 			font-rem(20)
 
 		&.is-active
 			border-bottom 3px solid  $color-highlighted
-			box-shadow none
+			box-shadow 5px 0 30px rgba(0, 0, 0, 0.1)
 			color $text-color
 			background-color $white
 
@@ -49,7 +60,7 @@
 			border-width 9px
 
 			&.is-active
-				border-width 9px
+				border-bottom-width 9px
 
 	&__row
 		+breakpoint-md()
@@ -80,7 +91,7 @@
 
 	&__content
 		border-radius 0 0 10px 10px
-		background-image linear-gradient(12.02deg, #FFF1C6 0%, #FFD7CC 100%), #C4C4C4
+		background-image linear-gradient(12.02deg, #FFF1C6 0%, #FFD7CC 100%)
 		padding 25px
 
 		+breakpoint-md()

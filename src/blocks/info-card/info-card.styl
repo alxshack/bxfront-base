@@ -56,6 +56,15 @@
 		&:last-child
 			margin-bottom 0
 
+	.btn-orange
+		+breakpoint-up-to-md()
+			background-color $color-highlighted--secondary
+
+	.btn-linear
+		+breakpoint-up-to-md()
+			background-image none
+			background-color #EBAF3E
+
 .info-cards
 	&--centered
 		align-items center
