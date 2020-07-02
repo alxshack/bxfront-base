@@ -2,10 +2,10 @@
 	.modal-tabs.js-tabs
 		ul.modal-tabs__list.js-tabs__list
 			li.modal-tabs__item
-				a(href='javascript:void(0);' data-id='demo-dannye').modal-tabs__link.js-tabs__tab.is-active  Демо-данные
+				a(href='javascript:void(0);' data-id='demo-dannye').modal-tabs__link.js-tabs__tab.is-active  Демо-#[br.hide-md]данные
 
 			li.modal-tabs__item
-				a(href='javascript:void(0);' data-id='demo-dannye-2').modal-tabs__link.js-tabs__tab  Демо на ваших данных
+				a(href='javascript:void(0);' data-id='demo-dannye-2').modal-tabs__link.js-tabs__tab  Демо на #[br.hide-md] ваших данных
 
 		.modal-tabs__body
 			#demo-dannye.modal-tabs__content.js-tabs__content.is-active
@@ -13,6 +13,7 @@
 					.modal-tabs__col
 						h4.heading-h4 Получите бесплатный #[br.hide-up-to-md] доступ с демо-данными
 						p Вы можете познакомиться с сервисом на готовых демонстрационных данных.
+						p.modal-tabs__remark.hide-up-to-md Пожалуйста, заполните все поля.
 
 
 					.modal-tabs__col
@@ -33,7 +34,9 @@
 								button(type='submit').btn.form__btn Начать
 								.form__group
 									input.form__checkbox(type='checkbox' id='privacy-2')
-									label(for='privacy-2').form__checkbox-label Соглашаюсь на обработку #[a(href='#') персональных данных]
+									label(for='privacy-2').form__checkbox-label Соглашаюсь на обработку #[a.bordered-red(href='#') персональных данных]
+
+						p.modal-tabs__remark.hide-md Пожалуйста, заполните все поля.
 
 			#demo-dannye-2.modal-tabs__content.js-tabs__content
 				.modal-tabs__row
@@ -43,6 +46,7 @@
 						- var checkedList= ['затрудняетесь с чего начать','уже пробовали вести управленческую отчетность','хотите увидеть демо сервиса на реальных данных','или все сразу'];
 						+list(checkedList)(class='checked-list checked-list--mb10 modal-tabs__checked-list')
 						p Мы с радостью все настроим и покажем. #[br] Будет интересно!
+						p.modal-tabs__remark.hide-up-to-md Пожалуйста, заполните все поля.
 
 
 					.modal-tabs__col
@@ -75,4 +79,6 @@
 								button(type='submit').btn.form__btn Отправить
 								.form__group
 									input.form__checkbox(type='checkbox' id='privacy-1')
-									label(for='privacy-1').form__checkbox-label Соглашаюсь на обработку #[a(href='#') персональных данных]
+									label(for='privacy-1').form__checkbox-label Соглашаюсь на обработку #[a.bordered-red(href='#') персональных данных]
+
+						p.modal-tabs__remark.hide-md Пожалуйста, заполните все поля.

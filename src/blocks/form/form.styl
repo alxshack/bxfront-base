@@ -16,7 +16,7 @@
 		width 100%
 
 		&+.form__group
-			margin-top 15px
+			margin-top 12px
 
 	&__checkbox
 		display none
@@ -28,10 +28,15 @@
 						bgimage('/icons/icon-checked.svg')
 
 		&-label
-			font-rem(13)
-			line(18,13)
+			font-rem(11)
+			line(18,11)
 			position relative
-			padding 1px 0 1px 32px
+			padding 3px 0 3px 32px
+
+			+breakpoint-md()
+				font-rem(13)
+				line(18,13)
+				padding 1px 0 1px 32px
 
 			&::before
 				content ''

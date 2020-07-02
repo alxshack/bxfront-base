@@ -1,7 +1,10 @@
 .fancybox
 	&-tabs-modal
-		width 100% !important
-		max-width 90%
+		+breakpoint-up-to-md()
+			left 10px !important
+			right 10px !important
+			top 46px !important
+
 
 		+breakpoint-md()
 			max-width 966px
@@ -13,7 +16,7 @@
 			size(40px,40px)
 			bgimage('icons/icon-close-white.svg')
 			top -40px
-			right -40px
+			right 0
 			position absolute
 			background-position center
 			background-size contain

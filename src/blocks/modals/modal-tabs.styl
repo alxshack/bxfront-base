@@ -1,5 +1,7 @@
 .modal-tabs
 	radius(10px)
+	color $text-color
+
 	&__content
 		display none
 		
@@ -17,7 +19,7 @@
 	&__link
 		@extend .bold
 		font-rem(18)
-		line(25,18)
+		line(25,20)
 		border-radius 10px 10px 0 0
 		display flex
 		align-items center
@@ -25,9 +27,13 @@
 		height 100%
 		background-color #F8F2F0
 		color $color-highlighted
-		padding 20px 15px
+		padding 20px 10px
 		border-bottom 3px solid  transparent
 		box-shadow -5px 15px 30px rgba(0, 0, 0, 0.1)
+
+
+		+breakpoint(370px)
+			font-rem(20)
 
 		&.is-active
 			border-bottom 3px solid  $color-highlighted
@@ -61,6 +67,16 @@
 			width 50%
 			padding-left 30px
 			padding-right 30px
+			display flex
+			flex-direction column
+
+	&__remark
+		color $text-color--secondary
+		margin-top 20px
+
+		+breakpoint-md()
+			padding-bottom 5px
+			margin-top auto
 
 	&__content
 		border-radius 0 0 10px 10px
@@ -75,3 +91,7 @@
 
 		+breakpoint-md()
 			margin-bottom 15px
+
+	.form
+		+breakpoint-md()
+			padding-top 5px
