@@ -1,29 +1,29 @@
 section.start-banner
 	.container
 		.remark-red Тарифы Управленки
-		h1.heading-h1 14 дней бесплатного функционала
+		h1.heading-h1 14 дней бесплатного #[br.hide-up-to-md] функционала
 
 		.start-banner__price
-			.price-cards.price-cards--no-indent.price-cards--centered
-				.price-card
-					.price-card__wrap
-						.price-card__top
-							h2.heading-h2.heading-h2--sm.price-card__heading Тариф «Базовый»
-							span.lead-md от ХХХХ  в месяц
-						.price-card__content
+			.info-cards.info-cards--no-indent.info-cards--centered
+				.info-card
+					.info-card__wrap
+						.info-card__top
+							h2.heading-h2.heading-h2--sm.info-card__heading Тариф «Базовый»
+							span.lead-md от ХХХХ ₽   в месяц
+						.info-card__content
 							- var listContent= ['Автоматическая загрузка выписок','Автоматическая разноска операций','Интеграция с 1C','Интеграция с Telegram','Все виды отчётов','Техническая поддержка'];
 							+list(listContent)(class='checked-bullet-list')
-						.price-card__bottom
-							a(href='#').btn-linear.price-card__btn Попробовать бесплатно
+						.info-card__bottom
+							a(href='#').btn-linear.info-card__btn Попробовать бесплатно
 
-				.price-card.price-card--active
-					.price-card__wrap
-						.price-card__top
-							h2.heading-h2.heading-h2--sm.price-card__heading Тариф «Полный»
-							span.lead-md от ХХХХ  в месяц
-						.price-card__content
-							h3.price-card__h3 Все функции тарифа «Базовый», плюс:
+				.info-card.info-card--active
+					.info-card__wrap
+						.info-card__top
+							h2.heading-h2.heading-h2--sm.info-card__heading Тариф «Полный»
+							span.lead-md от ХХХХ  ₽  в месяц
+						.info-card__content
+							h3.info-card__h3 Все функции тарифа «Базовый», плюс:
 							- var listContent= ['Настройка специалистом модулей автоматизации','Разработка и реализация индивидуальной методологии управленческого учета','Индивидуальная разработка дерева статей управленческого учета','Неограниченной количество консультаций с экспертом ','Настройка правил отнесения статей на аналитики','Корректировка статей и правил разноски по требованию','Настройка отчетов в соответствии с разработанной методикой'];
 							+list(listContent)(class='checked-bullet-list checked-bullet-list--green')
-						.price-card__bottom
-							a(href='#').btn-orange.price-card__btn Попробовать бесплатно
+						.info-card__bottom
+							a(href='#').btn-orange.info-card__btn Попробовать бесплатно
